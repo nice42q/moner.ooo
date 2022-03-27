@@ -2,14 +2,14 @@
 // Für die HTML meta angabe, bspw. <!DOCTYPE html><html lang="de">
 $lang_meta = "it";
 
-$page_title = "XMR conversion to EUR/BTC/CHF/USD and many more"; // Der Browser Tab Titel bzw. Suchmaschinen Titel
-$meta_description = "The Monero live exchange rate in many different currencies, free for everyone."; // Suchmaschinen Beschreibung / Text
-$meta_keywords = "Monero, XMR, fiat, value, rate, live, exchange, conversion"; // Suchmaschinen Keywords (angeblich nutzlos)
+$page_title = "Conversione XMR in EUR/BTC/CHF/USD e molti altri"; // Der Browser Tab Titel bzw. Suchmaschinen Titel
+$meta_description = "Il tasso di cambio Monero live in molte valute diverse, gratis per tutti."; // Suchmaschinen Beschreibung / Text
+$meta_keywords = "Monero, XMR, fiat, valore, tasso, live, scambio, conversione"; // Suchmaschinen Keywords (angeblich nutzlos)
 
-$title_h1 = "conversion to"; // ↓ XMR umrechnung nach ↓
+$title_h1 = "conversione in"; // ↓ XMR umrechnung nach ↓
 
 // Info Text
-$info = "The exchange rates on this site are for information purposes only. They are not guaranteed to be accurate, and are subject to change without notice. The exchange rates are updated every 5 Seconds. Last at <u>".$time."</u> clock, Europe/Berlin. Data provided by <a class='text-white' href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/monerooo/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a> | <a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
+$info = "I tassi di cambio su questo sito sono solo a scopo informativo. Non è garantita la loro accuratezza e sono soggetti a modifiche senza preavviso. I tassi di cambio sono aggiornati ogni 5 secondi. Ultimo alle <u>".$time."</u>, Europa/Berlino. Dati forniti da <a class='text-white' href='https://www.coingecko.com/it/monete/monero' hreflang='it' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/monerooo/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a> | <a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
 
 // Tooltip Titel
 $l_eur = "Euro";
