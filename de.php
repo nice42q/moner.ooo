@@ -9,7 +9,7 @@ $meta_keywords = "Monero, XMR, Fiat, Wert, Kurs, Live, Wechsel, Umrechnung"; // 
 $title_h1 = "umrechnung nach"; // ↓ XMR umrechnung nach ↓
 
 // Info Text
-$info = "Die Werte auf dieser Webseite dienen nur der Information. Der Wert ist nicht garantiert und wird ohne vorherige Ankündigung geändert.<br/>Die Werte werden normalerweise alle 5 Sekunden aktualisiert. Zuletzt um <u>".$time."</u> Uhr, Europe/Berlin. Daten bereitgestellt von <a class='text-white' href='https://www.coingecko.com/de/munze/monero' hreflang='de' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
+$info = "Die Werte auf dieser Webseite dienen nur der Information. Der Wert ist nicht garantiert und wird ohne vorherige Ankündigung geändert. Die Werte werden alle 5 Sekunden aktualisiert. Zuletzt um <u>".$time."</u> Uhr, Europe/Berlin. Daten bereitgestellt von <a class='text-white' href='https://www.coingecko.com/de/munze/monero' hreflang='de' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/monerooo/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a> | <a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
 
 // Tooltip Titel
 $l_eur = "Euro";

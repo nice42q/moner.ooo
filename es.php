@@ -9,7 +9,7 @@ $meta_keywords = "Monero, XMR, Fiat, Valor, Tasa, En Vivo, Cambio, Conversión";
 $title_h1 = "conversión según"; // ↓ XMR umrechnung nach ↓
 
 // Info Text
-$info = "Los valores que aparecen en este sitio web son meramente informativos. El valor no está garantizado y está sujeto a cambios sin previo aviso.<br/>Los valores se actualizan normalmente cada 5 segundos. Última actualización: <u>".$time."</u>, Europa/Berlín. Datos proporcionados por <a class='text-white' href='https://www.coingecko.com/es/monedas/monero' hreflang='es' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
+$info = "Los valores de este sitio web son meramente informativos. El valor no está garantizado y está sujeto a cambios sin previo aviso. Los valores se actualizan cada 5 segundos. Última actualización: <u>".$time."</u>, Europa/Berlín. Datos proporcionados por <a class='text-white' href='https://www.coingecko.com/es/monedas/monero' hreflang='es' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/monerooo/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a> | <a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
 
 // Tooltip Titel
 $l_eur = "Euro";
@@ -62,6 +62,6 @@ $l_czk = "Corona checa";
 $l_dkk = "Corona danesa";
 
 // Weitere Monero Links
-$getmonero = '<a class="text-white" href="https://www.getmonero.org/es/" hreflang="es" target="_blank" rel="external">Offizielle Webseite</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">Monero Ecosystem</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">MoneroTalk</a>';
+$getmonero = '<a class="text-white" href="https://www.getmonero.org/es/" hreflang="es" target="_blank" rel="external">Página oficial</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">Monero Ecosystem</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a>';
 
 ?>
