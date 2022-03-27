@@ -1,6 +1,6 @@
 <?php
 // Für die HTML meta angabe, bspw. <!DOCTYPE html><html lang="de">
-$lang_meta = "en";
+$lang_meta = "it";
 
 $page_title = "XMR conversion to EUR/BTC/CHF/USD and many more"; // Der Browser Tab Titel bzw. Suchmaschinen Titel
 $meta_description = "The Monero live exchange rate in many different currencies, free for everyone."; // Suchmaschinen Beschreibung / Text
