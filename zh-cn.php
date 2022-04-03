@@ -9,7 +9,7 @@ $meta_keywords = "门罗币, XMR, 法币, 价格, 汇率, 实时, 交易, 结汇
 $title_h1 = "转换至"; // ↓ XMR umrechnung nach ↓
 
 // Info Text
-$info = "本站提供的汇率仅供参考。其精确程度不被保证，且可能在您不注意的情况下发生变更。汇率每5秒钟更新一次。最近一次在欧洲/柏林时间 <u>".$time."</u> 。数据由 <a class='text-white' href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_blank'>CoinGecko</a>提供。<br/><a class='text-white' href='https://github.com/monerooo/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a> | <a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
+$info = "本站提供的汇率仅供参考。其精确程度不被保证，且可能在您不注意的情况下发生变更。汇率每5秒钟更新一次。最近一次在欧洲/柏林时间 <u>".$time."</u> 。数据由 <a class='text-white' href='https://www.coingecko.com/zh/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/%E9%97%A8%E7%BD%97%E5%B8%81' hreflang='zh' rel='external' target='_blank'>CoinGecko</a>提供。<br/><a class='text-white' href='https://github.com/monerooo/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a> | <a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
 
 // Tooltip Titel
 $l_eur = "欧元";
@@ -62,6 +62,6 @@ $l_czk = "捷克克朗";
 $l_dkk = "丹麦克朗";
 
 // Weitere Monero Links
-$getmonero = '<a class="text-white" href="https://www.getmonero.org/" hreflang="en" target="_blank" rel="external">官方网站</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">社区众筹系统 (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">门罗币生态圈</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">门罗浏览器</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk播客</a>';
+$getmonero = '<a class="text-white" href="https://www.getmonero.org/zh-cn/" hreflang="zh-cn" target="_blank" rel="external">官方网站</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">社区众筹系统 (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">门罗币生态圈</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">门罗浏览器</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk播客</a>';
 
 ?>
