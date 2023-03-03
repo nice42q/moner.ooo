@@ -9,7 +9,7 @@ $meta_keywords = "Monero, XMR, fiat, valore, tasso, live, scambio, conversione";
 $title_h1 = "conversione in"; // ↓ XMR umrechnung nach ↓
 
 // Info Text
-$info = "I tassi di cambio su questo sito sono solo a scopo informativo. Non è garantita la loro accuratezza e sono soggetti a modifiche senza preavviso. I tassi di cambio sono aggiornati ogni 5 secondi. Ultimo alle <u>".$time."</u>, Europa/Berlino. Dati forniti da <a class='text-white' href='https://www.coingecko.com/it/monete/monero' hreflang='it' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/monerooo/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a> | <a class='text-white' href='https://matrix.to/#/#monerooo:monero.social' hreflang='en' rel='external' target='_blank'>[matrix] #monerooo:monero.social</a>";
+$info = "I tassi di cambio su questo sito sono solo a scopo informativo. Non è garantita la loro accuratezza e sono soggetti a modifiche senza preavviso. I tassi di cambio sono aggiornati ogni 5 secondi. Ultimo alle <u>".$time."</u>, Europa/Berlino. Dati forniti da <a class='text-white' href='https://www.coingecko.com/it/monete/monero' hreflang='it' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a>";
 
 // Tooltip Titel
 $l_eur = "Euro";
