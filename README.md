@@ -1,9 +1,12 @@
-# moner.ooo
+![Favicon - moner.ooo](/img/apple-touch-icon-152x152.png)
+# Moner.ooo
 Add a new language or an improvement via 'Pull request'.
 
 ###### Display your favorite currency directly
 [moner.ooo/?in=usd](https://moner.ooo/?in=usd)
 
+###### Webserver sponsored by
+[native-servers.com](https://native-servers.com/)
 
 Thanks for the support.
 
