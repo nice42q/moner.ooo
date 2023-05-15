@@ -1,0 +1,40 @@
+.input-group-text {
+	width: 24%;
+	font-weight: 800;
+}
+input.form-control{
+	font-weight: 800;
+}
+.equals-box {
+	text-align: center;
+	color: #e9ecef;
+	font-weight: 800;
+	font-size: 42px;
+}
+.equals-text {
+	vertical-align: super;
+}
+p {
+	color: #e9ecef;
+}
+.gold {
+	color: #e8be74;
+}
+.cursor-default {
+	cursor: default;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+.text-center{
+	text-align: center;
+}
+
+@media only screen and (max-width: 475px) {
+	h1{
+		font-size: 1.2rem;
+	}
+	p{
+		font-size: 0.88rem;
+	}
+}
