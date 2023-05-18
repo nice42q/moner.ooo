@@ -60,7 +60,7 @@ $ARS = $api->ars;
 $BDT = $api->bdt;
 $BHD = $api->bhd;
 $BMD = $api->bmd;
-$CCP = $api->ccp;
+$CLP = $api->clp;
 $CZK = $api->czk;
 $DKK = $api->dkk;
 
