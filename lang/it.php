@@ -60,6 +60,7 @@ $l_bhd = "Dinar Bahraini";
 $l_bmd = "Dollaro delle Bermuda"; 
 $l_czk = "Corona Ceca";
 $l_dkk = "Corona Danese";
+$l_clp = "Peso cileno";
 
 // Link di Monero
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/it/" hreflang="it" target="_blank" rel="external">Sito ufficiale</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">Ecosistema Monero</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a> | <a class="text-white" href="https://t.me/moneroitalia" hreflang="en" target="_blank" rel="external">Telegram - Monero Italia</a>';
