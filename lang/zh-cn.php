@@ -61,6 +61,7 @@ $l_bmd = "百慕大元";
 $l_czk = "捷克克朗";
 $l_dkk = "丹麦克朗";
 $l_clp = "智利比索";
+$l_mxn = "墨西哥比索";
 
 // Weitere Monero Links
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/zh-cn/" hreflang="zh-cn" target="_blank" rel="external">官方网站</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">社区众筹系统 (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">门罗币生态圈</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">门罗浏览器</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk播客</a>';

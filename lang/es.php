@@ -61,6 +61,7 @@ $l_bmd = "Dólar de Bermudas";
 $l_czk = "Corona checa";
 $l_dkk = "Corona danesa";
 $l_clp = "Peso chileno";
+$l_mxn = "Peso mexicano";
 
 // Weitere Monero Links
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/es/" hreflang="es" target="_blank" rel="external">Página oficial</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">Monero Ecosystem</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://anchor.fm/elmonero" hreflang="en" target="_blank" rel="external">El Monero Podcast</a> | <a class="text-white" href="https://t.me/MoneroEsp" hreflang="en" target="_blank" rel="external">Telegram - Monero en español</a>';

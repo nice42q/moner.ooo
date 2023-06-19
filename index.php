@@ -63,6 +63,7 @@ $BMD = $api->bmd;
 $CLP = $api->clp;
 $CZK = $api->czk;
 $DKK = $api->dkk;
+$MXN = $api->mxn;
 
 // Lädt die Sprachdatei, nach der Sprache die im Browser eingestellt wurde
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -160,6 +161,8 @@ if(isset($_GET["in"])) {
         $xmr_in_fiat = number_format($INR, 2);
     }elseif($xmr_in == 'IDR'){
         $xmr_in_fiat = number_format($IDR, 2);
+    }elseif($xmr_in == 'MXN'){
+        $xmr_in_fiat = number_format($MXN, 2);
     }elseif($xmr_in == 'BTC'){
         $xmr_in_fiat = number_format($BTC, 8);
     }elseif($xmr_in == 'LTC'){
@@ -244,6 +247,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
             margin-bottom: 5px;
             font-size: 0.8rem;
             font-weight: bold;
+            min-width: 38px;
         }
         @media only screen and (max-width: 475px) {
             .btn{
@@ -268,44 +272,45 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CHF'><b><?php echo $l_chf; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CHF</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=RUB'><b><?php echo $l_rub; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">RUB</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CNY'><b><?php echo $l_cny; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CNY</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=JPY'><b><?php echo $l_jpy; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">JPY</button><br/>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=JPY'><b><?php echo $l_jpy; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">JPY</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=IDR'><b><?php echo $l_idr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">IDR</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KRW'><b><?php echo $l_krw; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KRW</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TRY'><b><?php echo $l_try; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TRY</button><br/>
                     <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AUD'><b><?php echo $l_aud; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AUD</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BMD'><b><?php echo $l_bmd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BMD</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CAD'><b><?php echo $l_cad; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CAD</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=HKD'><b><?php echo $l_hkd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">HKD</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NZD'><b><?php echo $l_nzd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NZD</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SGD'><b><?php echo $l_sgd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SGD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TWD'><b><?php echo $l_twd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TWD</button><br/>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TWD'><b><?php echo $l_twd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TWD</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ILS'><b><?php echo $l_ils; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ILS</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PLN'><b><?php echo $l_pln; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PLN</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ZAR'><b><?php echo $l_zar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ZAR</button><br/>
                     <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CZK'><b><?php echo $l_czk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CZK</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=DKK'><b><?php echo $l_dkk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">DKK</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NOK'><b><?php echo $l_nok; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NOK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PLN'><b><?php echo $l_pln; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PLN</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SEK'><b><?php echo $l_sek; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SEK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TRY'><b><?php echo $l_try; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TRY</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=UAH'><b><?php echo $l_uah; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">UAH</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ARS'><b><?php echo $l_ars; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ARS</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CLP'><b><?php echo $l_clp; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CLP</button>                
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PHP'><b><?php echo $l_php; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PHP</button><br/>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AED'><b><?php echo $l_aed; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AED</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BRL'><b><?php echo $l_brl; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BRL</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KRW'><b><?php echo $l_krw; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KRW</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MYR'><b><?php echo $l_myr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MYR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SAR'><b><?php echo $l_sar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SAR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VEF'><b><?php echo $l_vef; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VEF</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VND'><b><?php echo $l_vnd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VND</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ZAR'><b><?php echo $l_zar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ZAR</button><br/>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BDT'><b><?php echo $l_bdt; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BDT</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=HUF'><b><?php echo $l_huf; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">HUF</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ILS'><b><?php echo $l_ils; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ILS</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MMK'><b><?php echo $l_mmk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MMK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NGN'><b><?php echo $l_ngn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NGN</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=THB'><b><?php echo $l_thb; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">THB</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PHP'><b><?php echo $l_php; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PHP</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MXN'><b><?php echo $l_mxn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MXN</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BHD'><b><?php echo $l_bhd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BHD</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KWD'><b><?php echo $l_kwd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KWD</button><br/>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PKR'><b><?php echo $l_pkr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PKR</button>
+                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BRL'><b><?php echo $l_brl; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BRL</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MYR'><b><?php echo $l_myr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MYR</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VEF'><b><?php echo $l_vef; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VEF</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=UAH'><b><?php echo $l_uah; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">UAH</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VND'><b><?php echo $l_vnd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VND</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BDT'><b><?php echo $l_bdt; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BDT</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=HUF'><b><?php echo $l_huf; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">HUF</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MMK'><b><?php echo $l_mmk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MMK</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NGN'><b><?php echo $l_ngn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NGN</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=THB'><b><?php echo $l_thb; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">THB</button><br/>
+                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AED'><b><?php echo $l_aed; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AED</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SAR'><b><?php echo $l_sar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SAR</button>
+                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PKR'><b><?php echo $l_pkr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PKR</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=LKR'><b><?php echo $l_lkr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">LKR</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=INR'><b><?php echo $l_inr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">INR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=IDR'><b><?php echo $l_idr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">IDR</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BTC'><b><?php echo $l_btc; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BTC</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=LTC'><b><?php echo $l_ltc; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">LTC</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ETH'><b><?php echo $l_eth; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ETH</button>
@@ -338,6 +343,9 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                         <option value="RUB">RUB</option>
                         <option value="CNY">CNY</option>
                         <option value="JPY">JPY</option>
+                        <option value="IDR">IDR</option>
+                        <option value="KRW">KRW</option>
+                        <option value="TRY">TRY</option>
                         <option value="AUD">AUD</option>
                         <option value="BMD">BMD</option>
                         <option value="CAD">CAD</option>
@@ -345,36 +353,34 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                         <option value="NZD">NZD</option>
                         <option value="SGD">SGD</option>
                         <option value="TWD">TWD</option>
+                        <option value="ILS">ILS</option>
+                        <option value="PLN">PLN</option>
+                        <option value="ZAR">ZAR</option>
                         <option value="CZK">CZK</option>
                         <option value="DKK">DKK</option>
                         <option value="NOK">NOK</option>
-                        <option value="PLN">PLN</option>
                         <option value="SEK">SEK</option>
-                        <option value="TRY">TRY</option>
-                        <option value="UAH">UAH</option>
                         <option value="ARS">ARS</option>
                         <option value="CLP">CLP</option>
                         <option value="PHP">PHP</option>
-                        <option value="AED">AED</option>
+                        <option value="MXN">MXN</option>
+                        <option value="BHD">BHD</option>
+                        <option value="KWD">KWD</option>
                         <option value="BRL">BRL</option>
-                        <option value="KRW">KRW</option>
                         <option value="MYR">MYR</option>
-                        <option value="SAR">SAR</option>
                         <option value="VEF">VEF</option>
+                        <option value="UAH">UAH</option>
                         <option value="VND">VND</option>
-                        <option value="ZAR">ZAR</option>
                         <option value="BDT">BDT</option>
                         <option value="HUF">HUF</option>
-                        <option value="ILS">ILS</option>
                         <option value="MMK">MMK</option>
                         <option value="NGN">NGN</option>
                         <option value="THB">THB</option>
-                        <option value="BHD">BHD</option>
-                        <option value="KWD">KWD</option>
+                        <option value="AED">AED</option>
+                        <option value="SAR">SAR</option>
                         <option value="PKR">PKR</option>
                         <option value="LKR">LKR</option>
                         <option value="INR">INR</option>
-                        <option value="IDR">IDR</option>
                         <option value="BTC">BTC</option>
                         <option value="LTC">LTC</option>
                         <option value="ETH">ETH</option>
@@ -552,6 +558,9 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
             } else if (selectBox == "DKK") {
                 var value = fiatAmount / <?php echo $DKK; ?>;
                 xmrValue.value = value.toFixed(12);
+            } else if (selectBox == "MXN") {
+                var value = fiatAmount / <?php echo $MXN; ?>;
+                xmrValue.value = value.toFixed(12);
             }
         }
     </script>
@@ -707,8 +716,11 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
             } else if (selectBox == "CLP") {
                 var value = xmrAmount * <?php echo $CLP; ?>;
                 fiatValue.value = value.toFixed(2);
-            }  else if (selectBox == "DKK") {
+            } else if (selectBox == "DKK") {
                 var value = xmrAmount * <?php echo $DKK; ?>;
+                fiatValue.value = value.toFixed(2);
+            } else if (selectBox == "MXN") {
+                var value = xmrAmount * <?php echo $MXN; ?>;
                 fiatValue.value = value.toFixed(2);
             }
         }
