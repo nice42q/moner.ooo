@@ -1,1 +1,203 @@
-{"time":1687864232,"EUR":{"lastValue":162.96,"lastDate":1687864232},"BTC":{"lastValue":0.005524,"lastDate":1687864232},"USD":{"lastValue":177.28,"lastDate":1687864232},"GBP":{"lastValue":139.9,"lastDate":1687864232},"CHF":{"lastValue":168.16,"lastDate":1687864232},"RUB":{"lastValue":12493.64,"lastDate":1687592825},"CNY":{"lastValue":1210.02,"lastDate":1687864232},"JPY":{"lastValue":23429,"lastDate":1687791323},"IDR":{"lastValue":2454060,"lastDate":1687791323},"KRW":{"lastValue":213174,"lastDate":1687791323},"TRY":{"lastValue":4454.37,"lastDate":1687864232},"AUD":{"lastValue":262.26,"lastDate":1687864232},"BMD":{"lastValue":163.1,"lastDate":1687791323},"CAD":{"lastValue":236.95,"lastDate":1687864232},"HKD":{"lastValue":1276.96,"lastDate":1687791323},"NZD":{"lastValue":268.84,"lastDate":1687864232},"SGD":{"lastValue":220.83,"lastDate":1687791323},"TWD":{"lastValue":4180.88,"lastDate":1687516675},"ILS":{"lastValue":593,"lastDate":1687791323},"PLN":{"lastValue":688.66,"lastDate":1687864232},"ZAR":{"lastValue":3044.04,"lastDate":1687791323},"CZK":{"lastValue":3626.68,"lastDate":1687864232},"DKK":{"lastValue":1233.97,"lastDate":1687864232},"NOK":{"lastValue":1750.68,"lastDate":1687791323},"SEK":{"lastValue":2257.77,"lastDate":1687864232},"ARS":{"lastValue":74471.27,"lastDate":1687791983},"CLP":{"lastValue":131141,"lastDate":1687791323},"PHP":{"lastValue":8347.52,"lastDate":1687864232},"MXN":{"lastValue":2802.25,"lastDate":1687864232},"BHD":{"lastValue":61.49,"lastDate":1687791323},"KWD":{"lastValue":50.13,"lastDate":1687791323},"BRL":{"lastValue":729.43,"lastDate":1687864232},"MYR":{"lastValue":762.23,"lastDate":1687791323},"VEF":{"lastValue":16.33,"lastDate":1687791323},"UAH":{"lastValue":6022.55,"lastDate":1687791323},"VND":{"lastValue":3838920,"lastDate":1687791323},"BDT":{"lastValue":17644.25,"lastDate":1687791323},"HUF":{"lastValue":67125.46,"lastDate":1687791983},"MMK":{"lastValue":342408,"lastDate":1687791323},"NGN":{"lastValue":124198,"lastDate":1687791323},"THB":{"lastValue":5454.06,"lastDate":1687864232},"AED":{"lastValue":599.06,"lastDate":1687791323},"SAR":{"lastValue":611.69,"lastDate":1687791323},"PKR":{"lastValue":41133.75,"lastDate":1687592825},"LKR":{"lastValue":50080,"lastDate":1687791323},"INR":{"lastValue":14355.15,"lastDate":1687864232},"LTC":{"lastValue":1.89700818,"lastDate":1687864232},"ETH":{"lastValue":0.090323532479,"lastDate":1687864232},"XAG":{"lastValue":7.16,"lastDate":1687791323},"XAU":{"lastValue":0.52,"lastDate":1687433591}}
+{
+    "time": 1687864232,
+    "EUR": {
+        "lastValue": 162.96,
+        "lastDate": 1687864232
+    },
+    "BTC": {
+        "lastValue": 0.005524,
+        "lastDate": 1687864232
+    },
+    "USD": {
+        "lastValue": 177.28,
+        "lastDate": 1687864232
+    },
+    "GBP": {
+        "lastValue": 139.9,
+        "lastDate": 1687864232
+    },
+    "CHF": {
+        "lastValue": 168.16,
+        "lastDate": 1687864232
+    },
+    "RUB": {
+        "lastValue": 12493.64,
+        "lastDate": 1687592825
+    },
+    "CNY": {
+        "lastValue": 1210.02,
+        "lastDate": 1687864232
+    },
+    "JPY": {
+        "lastValue": 23429,
+        "lastDate": 1687791323
+    },
+    "IDR": {
+        "lastValue": 2454060,
+        "lastDate": 1687791323
+    },
+    "KRW": {
+        "lastValue": 213174,
+        "lastDate": 1687791323
+    },
+    "TRY": {
+        "lastValue": 4454.37,
+        "lastDate": 1687864232
+    },
+    "AUD": {
+        "lastValue": 262.26,
+        "lastDate": 1687864232
+    },
+    "BMD": {
+        "lastValue": 163.1,
+        "lastDate": 1687791323
+    },
+    "CAD": {
+        "lastValue": 236.95,
+        "lastDate": 1687864232
+    },
+    "HKD": {
+        "lastValue": 1276.96,
+        "lastDate": 1687791323
+    },
+    "NZD": {
+        "lastValue": 268.84,
+        "lastDate": 1687864232
+    },
+    "SGD": {
+        "lastValue": 220.83,
+        "lastDate": 1687791323
+    },
+    "TWD": {
+        "lastValue": 4180.88,
+        "lastDate": 1687516675
+    },
+    "ILS": {
+        "lastValue": 593,
+        "lastDate": 1687791323
+    },
+    "PLN": {
+        "lastValue": 688.66,
+        "lastDate": 1687864232
+    },
+    "ZAR": {
+        "lastValue": 3044.04,
+        "lastDate": 1687791323
+    },
+    "CZK": {
+        "lastValue": 3626.68,
+        "lastDate": 1687864232
+    },
+    "DKK": {
+        "lastValue": 1233.97,
+        "lastDate": 1687864232
+    },
+    "NOK": {
+        "lastValue": 1750.68,
+        "lastDate": 1687791323
+    },
+    "SEK": {
+        "lastValue": 2257.77,
+        "lastDate": 1687864232
+    },
+    "ARS": {
+        "lastValue": 74471.27,
+        "lastDate": 1687791983
+    },
+    "CLP": {
+        "lastValue": 131141,
+        "lastDate": 1687791323
+    },
+    "PHP": {
+        "lastValue": 8347.52,
+        "lastDate": 1687864232
+    },
+    "MXN": {
+        "lastValue": 2802.25,
+        "lastDate": 1687864232
+    },
+    "BHD": {
+        "lastValue": 61.49,
+        "lastDate": 1687791323
+    },
+    "KWD": {
+        "lastValue": 50.13,
+        "lastDate": 1687791323
+    },
+    "BRL": {
+        "lastValue": 729.43,
+        "lastDate": 1687864232
+    },
+    "MYR": {
+        "lastValue": 762.23,
+        "lastDate": 1687791323
+    },
+    "VEF": {
+        "lastValue": 16.33,
+        "lastDate": 1687791323
+    },
+    "UAH": {
+        "lastValue": 6022.55,
+        "lastDate": 1687791323
+    },
+    "VND": {
+        "lastValue": 3838920,
+        "lastDate": 1687791323
+    },
+    "BDT": {
+        "lastValue": 17644.25,
+        "lastDate": 1687791323
+    },
+    "HUF": {
+        "lastValue": 67125.46,
+        "lastDate": 1687791983
+    },
+    "MMK": {
+        "lastValue": 342408,
+        "lastDate": 1687791323
+    },
+    "NGN": {
+        "lastValue": 124198,
+        "lastDate": 1687791323
+    },
+    "THB": {
+        "lastValue": 5454.06,
+        "lastDate": 1687864232
+    },
+    "AED": {
+        "lastValue": 599.06,
+        "lastDate": 1687791323
+    },
+    "SAR": {
+        "lastValue": 611.69,
+        "lastDate": 1687791323
+    },
+    "PKR": {
+        "lastValue": 41133.75,
+        "lastDate": 1687592825
+    },
+    "LKR": {
+        "lastValue": 50080,
+        "lastDate": 1687791323
+    },
+    "INR": {
+        "lastValue": 14355.15,
+        "lastDate": 1687864232
+    },
+    "LTC": {
+        "lastValue": 1.89700818,
+        "lastDate": 1687864232
+    },
+    "ETH": {
+        "lastValue": 0.090323532479,
+        "lastDate": 1687864232
+    },
+    "XAG": {
+        "lastValue": 7.16,
+        "lastDate": 1687791323
+    },
+    "XAU": {
+        "lastValue": 0.52,
+        "lastDate": 1687433591
+    }
+}

@@ -1,1 +1,203 @@
-{"time":1687864231,"eur":{"lastValue":151.97,"lastDate":1687864231},"btc":{"lastValue":0.0054343,"lastDate":1687864231},"usd":{"lastValue":166.39,"lastDate":1687864231},"gbp":{"lastValue":130.77,"lastDate":1687864231},"chf":{"lastValue":148.81,"lastDate":1687864231},"rub":{"lastValue":14154.31,"lastDate":1687864231},"cny":{"lastValue":1200.86,"lastDate":1687864231},"jpy":{"lastValue":23921,"lastDate":1687864231},"idr":{"lastValue":2496645,"lastDate":1687864231},"krw":{"lastValue":216557,"lastDate":1687864231},"try":{"lastValue":4331.02,"lastDate":1687864231},"aud":{"lastValue":248.69,"lastDate":1687864231},"bmd":{"lastValue":166.39,"lastDate":1687864231},"cad":{"lastValue":218.86,"lastDate":1687864231},"hkd":{"lastValue":1303.4,"lastDate":1687864231},"nzd":{"lastValue":269.67,"lastDate":1687864231},"sgd":{"lastValue":224.51,"lastDate":1687864231},"twd":{"lastValue":5165.77,"lastDate":1687864231},"ils":{"lastValue":605.47,"lastDate":1687864231},"pln":{"lastValue":672.98,"lastDate":1687864231},"zar":{"lastValue":3070.95,"lastDate":1687864231},"czk":{"lastValue":3587.33,"lastDate":1687864231},"dkk":{"lastValue":1131.79,"lastDate":1687864231},"nok":{"lastValue":1785.16,"lastDate":1687864231},"sek":{"lastValue":1781.43,"lastDate":1687864231},"ars":{"lastValue":42329,"lastDate":1687864231},"clp":{"lastValue":134140,"lastDate":1687864231},"php":{"lastValue":9206.81,"lastDate":1687864231},"mxn":{"lastValue":2845.95,"lastDate":1687864231},"bhd":{"lastValue":62.72,"lastDate":1687864231},"kwd":{"lastValue":51.13,"lastDate":1687864231},"brl":{"lastValue":793.21,"lastDate":1687864231},"myr":{"lastValue":776.37,"lastDate":1687864231},"vef":{"lastValue":16.66,"lastDate":1687864231},"uah":{"lastValue":6145.54,"lastDate":1687864231},"vnd":{"lastValue":3915040,"lastDate":1687864231},"bdt":{"lastValue":18004.6,"lastDate":1687864231},"huf":{"lastValue":56031,"lastDate":1687864231},"mmk":{"lastValue":349401,"lastDate":1687864231},"ngn":{"lastValue":127205,"lastDate":1687864231},"thb":{"lastValue":5866.89,"lastDate":1687864231},"aed":{"lastValue":611.15,"lastDate":1687864231},"sar":{"lastValue":624.01,"lastDate":1687864231},"pkr":{"lastValue":47644,"lastDate":1687864231},"lkr":{"lastValue":51457,"lastDate":1687864231},"inr":{"lastValue":13643.83,"lastDate":1687864231},"ltc":{"lastValue":1.874,"lastDate":1687864231},"eth":{"lastValue":0.08852857,"lastDate":1687864231},"xag":{"lastValue":7.27,"lastDate":1687864231},"xau":{"lastValue":0.086509,"lastDate":1687864231}}
+{
+    "time": 1687864231,
+    "eur": {
+        "lastValue": 151.97,
+        "lastDate": 1687864231
+    },
+    "btc": {
+        "lastValue": 0.0054343,
+        "lastDate": 1687864231
+    },
+    "usd": {
+        "lastValue": 166.39,
+        "lastDate": 1687864231
+    },
+    "gbp": {
+        "lastValue": 130.77,
+        "lastDate": 1687864231
+    },
+    "chf": {
+        "lastValue": 148.81,
+        "lastDate": 1687864231
+    },
+    "rub": {
+        "lastValue": 14154.31,
+        "lastDate": 1687864231
+    },
+    "cny": {
+        "lastValue": 1200.86,
+        "lastDate": 1687864231
+    },
+    "jpy": {
+        "lastValue": 23921,
+        "lastDate": 1687864231
+    },
+    "idr": {
+        "lastValue": 2496645,
+        "lastDate": 1687864231
+    },
+    "krw": {
+        "lastValue": 216557,
+        "lastDate": 1687864231
+    },
+    "try": {
+        "lastValue": 4331.02,
+        "lastDate": 1687864231
+    },
+    "aud": {
+        "lastValue": 248.69,
+        "lastDate": 1687864231
+    },
+    "bmd": {
+        "lastValue": 166.39,
+        "lastDate": 1687864231
+    },
+    "cad": {
+        "lastValue": 218.86,
+        "lastDate": 1687864231
+    },
+    "hkd": {
+        "lastValue": 1303.4,
+        "lastDate": 1687864231
+    },
+    "nzd": {
+        "lastValue": 269.67,
+        "lastDate": 1687864231
+    },
+    "sgd": {
+        "lastValue": 224.51,
+        "lastDate": 1687864231
+    },
+    "twd": {
+        "lastValue": 5165.77,
+        "lastDate": 1687864231
+    },
+    "ils": {
+        "lastValue": 605.47,
+        "lastDate": 1687864231
+    },
+    "pln": {
+        "lastValue": 672.98,
+        "lastDate": 1687864231
+    },
+    "zar": {
+        "lastValue": 3070.95,
+        "lastDate": 1687864231
+    },
+    "czk": {
+        "lastValue": 3587.33,
+        "lastDate": 1687864231
+    },
+    "dkk": {
+        "lastValue": 1131.79,
+        "lastDate": 1687864231
+    },
+    "nok": {
+        "lastValue": 1785.16,
+        "lastDate": 1687864231
+    },
+    "sek": {
+        "lastValue": 1781.43,
+        "lastDate": 1687864231
+    },
+    "ars": {
+        "lastValue": 42329,
+        "lastDate": 1687864231
+    },
+    "clp": {
+        "lastValue": 134140,
+        "lastDate": 1687864231
+    },
+    "php": {
+        "lastValue": 9206.81,
+        "lastDate": 1687864231
+    },
+    "mxn": {
+        "lastValue": 2845.95,
+        "lastDate": 1687864231
+    },
+    "bhd": {
+        "lastValue": 62.72,
+        "lastDate": 1687864231
+    },
+    "kwd": {
+        "lastValue": 51.13,
+        "lastDate": 1687864231
+    },
+    "brl": {
+        "lastValue": 793.21,
+        "lastDate": 1687864231
+    },
+    "myr": {
+        "lastValue": 776.37,
+        "lastDate": 1687864231
+    },
+    "vef": {
+        "lastValue": 16.66,
+        "lastDate": 1687864231
+    },
+    "uah": {
+        "lastValue": 6145.54,
+        "lastDate": 1687864231
+    },
+    "vnd": {
+        "lastValue": 3915040,
+        "lastDate": 1687864231
+    },
+    "bdt": {
+        "lastValue": 18004.6,
+        "lastDate": 1687864231
+    },
+    "huf": {
+        "lastValue": 56031,
+        "lastDate": 1687864231
+    },
+    "mmk": {
+        "lastValue": 349401,
+        "lastDate": 1687864231
+    },
+    "ngn": {
+        "lastValue": 127205,
+        "lastDate": 1687864231
+    },
+    "thb": {
+        "lastValue": 5866.89,
+        "lastDate": 1687864231
+    },
+    "aed": {
+        "lastValue": 611.15,
+        "lastDate": 1687864231
+    },
+    "sar": {
+        "lastValue": 624.01,
+        "lastDate": 1687864231
+    },
+    "pkr": {
+        "lastValue": 47644,
+        "lastDate": 1687864231
+    },
+    "lkr": {
+        "lastValue": 51457,
+        "lastDate": 1687864231
+    },
+    "inr": {
+        "lastValue": 13643.83,
+        "lastDate": 1687864231
+    },
+    "ltc": {
+        "lastValue": 1.874,
+        "lastDate": 1687864231
+    },
+    "eth": {
+        "lastValue": 0.08852857,
+        "lastDate": 1687864231
+    },
+    "xag": {
+        "lastValue": 7.27,
+        "lastDate": 1687864231
+    },
+    "xau": {
+        "lastValue": 0.086509,
+        "lastDate": 1687864231
+    }
+}
