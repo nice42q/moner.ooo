@@ -4,66 +4,173 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
+$array = array("EUR",
+	"BTC",
+	"USD",
+	"GBP",
+	"CHF",
+	"RUB",
+	"CNY",
+	"JPY",
+	"IDR",
+	"KRW",
+	"TRY",
+	"AUD",
+	"BMD",
+	"CAD",
+	"HKD",
+	"NZD",
+	"SGD",
+	"TWD",
+	"ILS",
+	"PLN",
+	"ZAR",
+	"CZK",
+	"DKK",
+	"NOK",
+	"SEK",
+	"ARS",
+	"CLP",
+	"PHP",
+	"MXN",
+	"BHD",
+	"KWD",
+	"BRL",
+	"MYR",
+	"VEF",
+	"UAH",
+	"VND",
+	"BDT",
+	"HUF",
+	"MMK",
+	"NGN",
+	"THB",
+	"AED",
+	"SAR",
+	"PKR",
+	"LKR",
+	"INR",
+	"BTC",
+	"LTC",
+	"ETH",
+	"XAG",
+	"XAU");
+
 include('coingecko.php');
+include('localmonero.php');
 
 // Holt die API Daten
-$api = json_decode(file_get_contents('coingecko.json'));
+$api_cg = json_decode(file_get_contents('coingecko.json'));
+$api_lm = json_decode(file_get_contents('localmonero.json'));
+
 
 // Holt die Zeit der letzten Abfrage
-$time = date("H:i:s", $api->time);
+$time_cg = date("H:i:s", $api_cg->time);
+$time_lm = date("H:i:s", $api_lm->time);
+$time = $time_cg;
 
 // Holt die einzelnen Werte für die Berechnung
-$BTC = $api->btc;
-$EUR = $api->eur;
-$USD = $api->usd;
-$CHF = $api->chf;
-$LTC = $api->ltc;
-$CAD = $api->cad;
-$AUD = $api->aud;
-$HKD = $api->hkd;
-$SGD = $api->sgd;
-$GBP = $api->gbp;
-$RUB = $api->rub;
-$ZAR = $api->zar;
-$TRY = $api->try;
-$JPY = $api->jpy;
-$PLN = $api->pln;
-$INR = $api->inr;
-$AED = $api->aed;
-$ETH = $api->eth;
-$UAH = $api->uah;
-$KRW = $api->krw;
-$BRL = $api->brl;
-$MYR = $api->myr;
-$CNY = $api->cny;
-$XAU = $api->xau;
-$XAG = $api->xag;
-$XDR = $api->xdr;
-$VND = $api->vnd;
-$VEF = $api->vef;
-$THB = $api->thb;
-$SAR = $api->sar;
-$SEK = $api->sek;
-$PKR = $api->pkr;
-$NOK = $api->nok;
-$LKR = $api->lkr;
-$MMK = $api->mmk;
-$HUF = $api->huf;
-$ILS = $api->ils;
-$KWD = $api->kwd;
-$NGN = $api->ngn;
-$NZD = $api->nzd;
-$PHP = $api->php;
-$IDR = $api->idr;
-$TWD = $api->twd;
-$ARS = $api->ars;
-$BDT = $api->bdt;
-$BHD = $api->bhd;
-$BMD = $api->bmd;
-$CLP = $api->clp;
-$CZK = $api->czk;
-$DKK = $api->dkk;
-$MXN = $api->mxn;
+$BTC = $api_cg->btc->lastValue;
+$EUR = $api_cg->eur->lastValue;
+$USD = $api_cg->usd->lastValue;
+$CHF = $api_cg->chf->lastValue;
+$LTC = $api_cg->ltc->lastValue;
+$CAD = $api_cg->cad->lastValue;
+$AUD = $api_cg->aud->lastValue;
+$HKD = $api_cg->hkd->lastValue;
+$SGD = $api_cg->sgd->lastValue;
+$GBP = $api_cg->gbp->lastValue;
+$RUB = $api_cg->rub->lastValue;
+$ZAR = $api_cg->zar->lastValue;
+$TRY = $api_cg->try->lastValue;
+$JPY = $api_cg->jpy->lastValue;
+$PLN = $api_cg->pln->lastValue;
+$INR = $api_cg->inr->lastValue;
+$AED = $api_cg->aed->lastValue;
+$ETH = $api_cg->eth->lastValue;
+$UAH = $api_cg->uah->lastValue;
+$KRW = $api_cg->krw->lastValue;
+$BRL = $api_cg->brl->lastValue;
+$MYR = $api_cg->myr->lastValue;
+$CNY = $api_cg->cny->lastValue;
+$XAU = $api_cg->xau->lastValue;
+$XAG = $api_cg->xag->lastValue;
+$VND = $api_cg->vnd->lastValue;
+$VEF = $api_cg->vef->lastValue;
+$THB = $api_cg->thb->lastValue;
+$SAR = $api_cg->sar->lastValue;
+$SEK = $api_cg->sek->lastValue;
+$PKR = $api_cg->pkr->lastValue;
+$NOK = $api_cg->nok->lastValue;
+$LKR = $api_cg->lkr->lastValue;
+$MMK = $api_cg->mmk->lastValue;
+$HUF = $api_cg->huf->lastValue;
+$ILS = $api_cg->ils->lastValue;
+$KWD = $api_cg->kwd->lastValue;
+$NGN = $api_cg->ngn->lastValue;
+$NZD = $api_cg->nzd->lastValue;
+$PHP = $api_cg->php->lastValue;
+$IDR = $api_cg->idr->lastValue;
+$TWD = $api_cg->twd->lastValue;
+$ARS = $api_cg->ars->lastValue;
+$BDT = $api_cg->bdt->lastValue;
+$BHD = $api_cg->bhd->lastValue;
+$BMD = $api_cg->bmd->lastValue;
+$CLP = $api_cg->clp->lastValue;
+$CZK = $api_cg->czk->lastValue;
+$DKK = $api_cg->dkk->lastValue;
+$MXN = $api_cg->mxn->lastValue;
+
+$BTC_lm = $api_lm->BTC->lastValue;
+$EUR_lm = $api_lm->EUR->lastValue;
+$USD_lm = $api_lm->USD->lastValue;
+$CHF_lm = $api_lm->CHF->lastValue;
+$LTC_lm = $api_lm->LTC->lastValue;
+$CNY_lm = $api_lm->CNY->lastValue;
+$GBP_lm = $api_lm->GBP->lastValue;
+$RUB_lm = $api_lm->RUB->lastValue;
+$TRY_lm = $api_lm->TRY->lastValue;
+$ETH_lm = $api_lm->ETH->lastValue;
+$PLN_lm = $api_lm->PLN->lastValue;
+$HKD_lm = $api_lm->HKD->lastValue;
+$KRW_lm = $api_lm->KRW->lastValue;
+$IDR_lm = $api_lm->IDR->lastValue;
+$JPY_lm = $api_lm->JPY->lastValue;
+$XAU_lm = $api_lm->XAU->lastValue;
+$XAG_lm = $api_lm->XAG->lastValue;
+$AUD_lm = $api_lm->AUD->lastValue;
+$CAD_lm = $api_lm->CAD->lastValue;
+$ZAR_lm = $api_lm->ZAR->lastValue;
+$SGD_lm = $api_lm->SGD->lastValue;
+$INR_lm = $api_lm->INR->lastValue;
+$AED_lm = $api_lm->AED->lastValue;
+$UAH_lm = $api_lm->UAH->lastValue;
+$BRL_lm = $api_lm->BRL->lastValue;
+$MYR_lm = $api_lm->MYR->lastValue;
+$VND_lm = $api_lm->VND->lastValue;
+$VEF_lm = $api_lm->VEF->lastValue;
+$THB_lm = $api_lm->THB->lastValue;
+$SAR_lm = $api_lm->SAR->lastValue;
+$SEK_lm = $api_lm->SEK->lastValue;
+$PKR_lm = $api_lm->PKR->lastValue;
+$NOK_lm = $api_lm->NOK->lastValue;
+$LKR_lm = $api_lm->LKR->lastValue;
+$MMK_lm = $api_lm->MMK->lastValue;
+$HUF_lm = $api_lm->HUF->lastValue;
+$ILS_lm = $api_lm->ILS->lastValue;
+$KWD_lm = $api_lm->KWD->lastValue;
+$NGN_lm = $api_lm->NGN->lastValue;
+$NZD_lm = $api_lm->NZD->lastValue;
+$PHP_lm = $api_lm->PHP->lastValue;
+$TWD_lm = $api_lm->TWD->lastValue;
+$ARS_lm = $api_lm->ARS->lastValue;
+$BDT_lm = $api_lm->BDT->lastValue;
+$BHD_lm = $api_lm->BHD->lastValue;
+$BMD_lm = $api_lm->BMD->lastValue;
+$CLP_lm = $api_lm->CLP->lastValue;
+$CZK_lm = $api_lm->CZK->lastValue;
+$DKK_lm = $api_lm->DKK->lastValue;
+$MXN_lm = $api_lm->MXN->lastValue;
 
 // Lädt die Sprachdatei, nach der Sprache die im Browser eingestellt wurde
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -247,12 +354,30 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
             margin-bottom: 5px;
             font-size: 0.8rem;
             font-weight: bold;
-            min-width: 38px;
         }
-        @media only screen and (max-width: 475px) {
+
+        .clipboard-copy{
+            border-top: 1px;
+            border-bottom: 1px;
+            width: auto;
+        }
+
+        @media (max-width: 475px) {
             .btn{
                 padding: 1px;
                 font-size: 0.6rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .btn{
+                min-width: 38px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            small.text-info{
+                padding-right: 7%;
             }
         }
     </style>
@@ -260,12 +385,11 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
 
 <body>
     <div class="container pt-4">
-        <div class="row">
-            <div class="col"></div>
-            
-            <div class="col-10">
+        <div class="row">            
+            <div class="col-12">
                 <div class="cursor-default text-center text-white">
                     <h1 lang="<?php echo $lang_meta; ?>"><span style="color:#4d4d4d;">&darr;</span>&nbsp;<span style="color:#ff6600;" title="Monero">XMR</span>&nbsp;<?php echo $title_h1;?>&nbsp;<span style="color:#4d4d4d;">&darr;</span></h1>
+                    <div class="fiat-btns">
                     <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/'><b><?php echo $l_eur; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">EUR</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=USD'><b><?php echo $l_usd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">USD</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=GBP'><b><?php echo $l_gbp; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">GBP</button>
@@ -317,18 +441,26 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAG'><b><?php echo $l_xag; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAG</button>
                     | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAU'><b><?php echo $l_xau; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAU</button>
                 </div>
+                </div>
                 <hr class="gold" />
                 
                 <div class="input-group">
+                    <button onclick="copyToClipBoardXMR()" class="btn-outline-secondary input-group-text clipboard-copy" title="<?php echo $clipboard_copy_tooltip; ?>" data-toggle="tooltip" data-bs-html="true" data-placement="top">&#128203;</button>
                     <input class="form-control" id="xmrInput" type="text" spellcheck="false" autocorrect="off" inputmode="numeric" aria-describedby="basic-addon-xmr" value="1" onchange="xmrConvert(this.value)" onkeyup="this.value = this.value.replace(/[^\.^,\d]/g, ''); this.value = this.value.replace(/\,/, '.'); if(this.value.split('.').length > 2){this.value = this.value.slice(0, -1);} xmrConvert(this.value)">
                     <input class="input-group-text" id="basic-addon-xmr" type="text" value="XMR" disabled>
                 </div>
                 
                 <div class="equals-box">
                     <span class="equals-text cursor-default">=</span>
+                    <!-- Rounded switch -->
+                    <label class="switch" style="float:right; top:20px; right:20px;" title="<b><?php echo $localmonero_tooltip; ?></b>" data-toggle="tooltip" data-bs-html="true" data-placement="left">
+                        <input type="checkbox" class="localmonero-check" onchange="xmrConvert(document.getElementById('xmrInput').value)">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
                 
                 <div class="fiatDiv input-group">
+                    <button onclick="copyToClipBoardFiat()" class="btn-outline-secondary input-group-text clipboard-copy" title="<?php echo $clipboard_copy_tooltip; ?>" data-toggle="tooltip" data-bs-html="true" data-placement="top">&#128203;</button>
                     <input class="form-control" id="fiatInput" type="text" spellcheck="false" autocorrect="off" inputmode="numeric" value="<?php echo $xmr_in_fiat; ?>" onchange="fiatConvert(this.value)" onkeyup="this.value = this.value.replace(/[^\.^,\d]/g, ''); this.value = this.value.replace(/\,/, '.'); if(this.value.split('.').length > 2){this.value = this.value.slice(0, -1);} fiatConvert(this.value)">
                     <select class="input-group-text cursor-pointer" id="selectBox" onchange="xmrConvert(this.value)">
                         <?php
@@ -390,7 +522,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                 </div>
                 
                 <hr class="gold" />
-                <small class="cursor-default text-white" lang="<?php echo $lang_meta; ?>">
+                <small class="cursor-default text-white text-info" lang="<?php echo $lang_meta; ?>">
                     <?php echo $info; ?>
                 </small>
                 <hr />
@@ -399,338 +531,874 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                 </small>
             </div>
             
-            <div class="col"></div>
         </div>
     </div>
 
-    <!---- umrechnung bei EUR/BTC/CHF/USD angabe -->
-    <script type="text/javascript">
-        function fiatConvert(value)
-        {
-            var fiatAmount = document.getElementById("fiatInput").value;             // Holt sich den Wert aus dem Eingabefeld
-            var xmrValue = document.getElementById("xmrInput");
-            var selectBox = document.getElementById("selectBox").value;
 
-            if (selectBox == "BTC") {                                                // Welche Umrechnung?
-                var value = fiatAmount / <?php echo number_format($BTC, 8); ?>;      // Die Formel
-                xmrValue.value = value.toFixed(12);                                  // Formatiert und gibt die Umrechnung aus
-            } else if (selectBox == "EUR") {
-                var value = fiatAmount / <?php echo $EUR; ?>;
+<!---- umrechnung bei EUR/BTC/CHF/USD angabe -->
+<script type="text/javascript">
+    function fiatConvert(value)
+    {
+        // Holt sich den Wert aus dem Eingabefeld
+        let fiatAmount = document.getElementById("fiatInput").value;
+        let xmrValue = document.getElementById("xmrInput");
+        let selectBox = document.getElementById("selectBox").value;
+
+        // Welche Umrechnung?
+        if (selectBox == "BTC") {
+            if ($('input.localmonero-check').is(':checked')) {
+                // Die Formel
+                let value = fiatAmount / ((<?php echo $BTC; ?> + <?php echo $BTC_lm; ?>) / 2);
+                // Formatiert und gibt die Umrechnung aus
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "USD") {
-                var value = fiatAmount / <?php echo $USD; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $BTC; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CHF") {
-                var value = fiatAmount / <?php echo $CHF; ?>;
+            }
+        } else if (selectBox == "EUR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $EUR; ?> + <?php echo $EUR_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "LTC") {
-                var value = fiatAmount / <?php echo $LTC; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $EUR; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CAD") {
-                var value = fiatAmount / <?php echo $CAD; ?>;
+            }
+        } else if (selectBox == "USD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $USD; ?> + <?php echo $USD_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "AUD") {
-                var value = fiatAmount / <?php echo $AUD; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $USD; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "HKD") {
-                var value = fiatAmount / <?php echo $HKD; ?>;
+            }
+        } else if (selectBox == "CHF") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $CHF; ?> + <?php echo $CHF_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "SGD") {
-                var value = fiatAmount / <?php echo $SGD; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $CHF; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "GBP") {
-                var value = fiatAmount / <?php echo $GBP; ?>;
+            }
+        } else if (selectBox == "LTC") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $LTC; ?> + <?php echo $LTC_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "RUB") {
-                var value = fiatAmount / <?php echo $RUB; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $LTC; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ZAR") {
-                var value = fiatAmount / <?php echo $ZAR; ?>;
+            }
+        } else if (selectBox == "CAD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $CAD; ?> + <?php echo $CAD_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "TRY") {
-                var value = fiatAmount / <?php echo $TRY; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $CAD; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "JPY") {
-                var value = fiatAmount / <?php echo $JPY; ?>;
+            }
+        } else if (selectBox == "AUD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $AUD; ?> + <?php echo $AUD_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "PLN") {
-                var value = fiatAmount / <?php echo $PLN; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $AUD; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "INR") {
-                var value = fiatAmount / <?php echo $INR; ?>;
+            }
+        } else if (selectBox == "HKD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $HKD; ?> + <?php echo $HKD_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "AED") {
-                var value = fiatAmount / <?php echo $AED; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $HKD; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ETH") {
-                var value = fiatAmount / <?php echo $ETH; ?>;
+            }
+        } else if (selectBox == "SGD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $SGD; ?> + <?php echo $SGD_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "UAH") {
-                var value = fiatAmount / <?php echo $UAH; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $SGD; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "KRW") {
-                var value = fiatAmount / <?php echo $KRW; ?>;
+            }
+        } else if (selectBox == "GBP") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $GBP; ?> + <?php echo $GBP_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BRL") {
-                var value = fiatAmount / <?php echo $BRL; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $GBP; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "MYR") {
-                var value = fiatAmount / <?php echo $MYR; ?>;
+            }
+        } else if (selectBox == "RUB") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $RUB; ?> + <?php echo $RUB_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CNY") {
-                var value = fiatAmount / <?php echo $CNY; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $RUB; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "XAG") {
-                var value = fiatAmount / <?php echo $XAG; ?>;
+            }
+        } else if (selectBox == "ZAR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $ZAR; ?> + <?php echo $ZAR_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "XAU") {
-                var value = fiatAmount / <?php echo $XAU; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $ZAR; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "VEF") {
-                var value = fiatAmount / <?php echo $VEF; ?>;
+            }
+        } else if (selectBox == "TRY") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $TRY; ?> + <?php echo $TRY_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "VND") {
-                var value = fiatAmount / <?php echo $VND; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $TRY; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "THB") {
-                var value = fiatAmount / <?php echo $THB; ?>;
+            }
+        } else if (selectBox == "JPY") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $JPY; ?> + <?php echo $JPY_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "SAR") {
-                var value = fiatAmount / <?php echo $SAR; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $JPY; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "SEK") {
-                var value = fiatAmount / <?php echo $SEK; ?>;
+            }
+        } else if (selectBox == "PLN") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $PLN; ?> + <?php echo $PLN_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "PKR") {
-                var value = fiatAmount / <?php echo $PKR; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $PLN; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "NZD") {
-                var value = fiatAmount / <?php echo $NZD; ?>;
+            }
+        } else if (selectBox == "INR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $INR; ?> + <?php echo $INR_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "PHP") {
-                var value = fiatAmount / <?php echo $PHP; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $INR; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "NOK") {
-                var value = fiatAmount / <?php echo $NOK; ?>;
+            }
+        } else if (selectBox == "AED") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $AED; ?> + <?php echo $AED_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "LKR") {
-                var value = fiatAmount / <?php echo $LKR; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $AED; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "MMK") {
-                var value = fiatAmount / <?php echo $MMK; ?>;
+            }
+        } else if (selectBox == "ETH") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $ETH; ?> + <?php echo $ETH_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "HUF") {
-                var value = fiatAmount / <?php echo $HUF; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $ETH; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ILS") {
-                var value = fiatAmount / <?php echo $ILS; ?>;
+            }
+        } else if (selectBox == "UAH") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $UAH; ?> + <?php echo $UAH_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "KWD") {
-                var value = fiatAmount / <?php echo $KWD; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $UAH; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "NGN") {
-                var value = fiatAmount / <?php echo $NGN; ?>;
+            }
+        } else if (selectBox == "KRW") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $KRW; ?> + <?php echo $KRW_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "IDR") {
-                var value = fiatAmount / <?php echo $IDR; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $KRW; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "TWD") {
-                var value = fiatAmount / <?php echo $TWD; ?>;
+            }
+        } else if (selectBox == "BRL") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $BRL; ?> + <?php echo $BRL_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ARS") {
-                var value = fiatAmount / <?php echo $ARS; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $BRL; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BDT") {
-                var value = fiatAmount / <?php echo $BDT; ?>;
+            }
+        } else if (selectBox == "MYR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $MYR; ?> + <?php echo $MYR_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BHD") {
-                var value = fiatAmount / <?php echo $BHD; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $MYR; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BMD") {
-                var value = fiatAmount / <?php echo $BMD; ?>;
+            }
+        } else if (selectBox == "CNY") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $CNY; ?> + <?php echo $CNY_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CZK") {
-                var value = fiatAmount / <?php echo $CZK; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $CNY; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CLP") {
-                var value = fiatAmount / <?php echo $CLP; ?>;
+            }
+        } else if (selectBox == "XAG") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $XAG; ?> + <?php echo $XAG_lm; ?>) / 2);
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "DKK") {
-                var value = fiatAmount / <?php echo $DKK; ?>;
+            } else {
+                let value = fiatAmount / <?php echo $XAG; ?>;
                 xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "MXN") {
-                var value = fiatAmount / <?php echo $MXN; ?>;
+            }
+        } else if (selectBox == "XAU") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $XAU; ?> + <?php echo $XAU_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $XAU; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "VEF") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $VEF; ?> + <?php echo $VEF_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $VEF; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "VND") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $VND; ?> + <?php echo $VND_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $VND; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "THB") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $THB; ?> + <?php echo $THB_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $THB; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "SAR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $SAR; ?> + <?php echo $SAR_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $SAR; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "SEK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $SEK; ?> + <?php echo $SEK_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $SEK; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "PKR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $PKR; ?> + <?php echo $PKR_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $PKR; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "NZD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $NZD; ?> + <?php echo $NZD_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $NZD; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "PHP") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $PHP; ?> + <?php echo $PHP_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $PHP; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "NOK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $NOK; ?> + <?php echo $NOK_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $NOK; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "LKR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $LKR; ?> + <?php echo $LKR_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $LKR; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "MMK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $MMK; ?> + <?php echo $MMK_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $MMK; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "HUF") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $HUF; ?> + <?php echo $HUF_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $HUF; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "ILS") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $ILS; ?> + <?php echo $ILS_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $ILS; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "KWD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $KWD; ?> + <?php echo $KWD_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $KWD; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "NGN") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $NGN; ?> + <?php echo $NGN_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $NGN; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "IDR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $IDR; ?> + <?php echo $IDR_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $IDR; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "TWD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $TWD; ?> + <?php echo $TWD_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $TWD; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "ARS") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $ARS; ?> + <?php echo $ARS_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $ARS; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "BDT") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $BDT; ?> + <?php echo $BDT_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $BDT; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "BHD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $BHD; ?> + <?php echo $BHD_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $BHD; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "BMD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $BMD; ?> + <?php echo $BMD_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $BMD; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "CZK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $CZK; ?> + <?php echo $CZK_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $CZK; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "CLP") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $CLP; ?> + <?php echo $CLP_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $CLP; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "DKK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $DKK; ?> + <?php echo $DKK_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $DKK; ?>;
+                xmrValue.value = value.toFixed(12);
+            }
+        } else if (selectBox == "MXN") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = fiatAmount / ((<?php echo $MXN; ?> + <?php echo $MXN_lm; ?>) / 2);
+                xmrValue.value = value.toFixed(12);
+            } else {
+                let value = fiatAmount / <?php echo $MXN; ?>;
                 xmrValue.value = value.toFixed(12);
             }
         }
-    </script>
-    <!---- umrechnung bei XMR angabe -->
-    <script type="text/javascript">
-        function xmrConvert(value)
-        {
-            var xmrAmount = document.getElementById("xmrInput").value;
-            var fiatValue = document.getElementById("fiatInput");
-            var selectBox = document.getElementById("selectBox").value;
+    }
+</script>
 
-            if (selectBox == "BTC") {
-                var value = xmrAmount * <?php echo number_format($BTC, 8); ?>;
+<!---- umrechnung bei XMR angabe -->
+<script type="text/javascript">
+    function xmrConvert(value)
+    {
+        let xmrAmount = document.getElementById("xmrInput").value;
+        let fiatValue = document.getElementById("fiatInput");
+        let selectBox = document.getElementById("selectBox").value;
+
+        if (selectBox == "BTC") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $BTC; ?> + <?php echo $BTC_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(8);
-            } else if (selectBox == "EUR") {
-                var value = xmrAmount * <?php echo $EUR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "USD") {
-                var value = xmrAmount * <?php echo $USD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CHF") {
-                var value = xmrAmount * <?php echo $CHF; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "LTC") {
-                var value = xmrAmount * <?php echo $LTC; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $BTC; ?>;
                 fiatValue.value = value.toFixed(8);
-            } else if (selectBox == "CAD") {
-                var value = xmrAmount * <?php echo $CAD; ?>;
+            }
+        } else if (selectBox == "EUR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $EUR; ?> + <?php echo $EUR_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "AUD") {
-                var value = xmrAmount * <?php echo $AUD; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $EUR; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "HKD") {
-                var value = xmrAmount * <?php echo $HKD; ?>;
+            }
+        } else if (selectBox == "USD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $USD; ?> + <?php echo $USD_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "SGD") {
-                var value = xmrAmount * <?php echo $SGD; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $USD; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "GBP") {
-                var value = xmrAmount * <?php echo $GBP; ?>;
+            }
+        } else if (selectBox == "CHF") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $CHF; ?> + <?php echo $CHF_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "RUB") {
-                var value = xmrAmount * <?php echo $RUB; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $CHF; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ZAR") {
-                var value = xmrAmount * <?php echo $ZAR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "TRY") {
-                var value = xmrAmount * <?php echo $TRY; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "JPY") {
-                var value = xmrAmount * <?php echo $JPY; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "PLN") {
-                var value = xmrAmount * <?php echo $PLN; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "INR") {
-                var value = xmrAmount * <?php echo $INR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "AED") {
-                var value = xmrAmount * <?php echo $AED; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ETH") {
-                var value = xmrAmount * <?php echo $ETH; ?>;
+            }
+        } else if (selectBox == "LTC") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $LTC; ?> + <?php echo $LTC_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(8);
-            } else if (selectBox == "UAH") {
-                var value = xmrAmount * <?php echo $UAH; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $LTC; ?>;
+                fiatValue.value = value.toFixed(8);
+            }
+        } else if (selectBox == "CAD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $CAD; ?> + <?php echo $CAD_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "KRW") {
-                var value = xmrAmount * <?php echo $KRW; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $CAD; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BRL") {
-                var value = xmrAmount * <?php echo $BRL; ?>;
+            }
+        } else if (selectBox == "AUD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $AUD; ?> + <?php echo $AUD_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "MYR") {
-                var value = xmrAmount * <?php echo $MYR; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $AUD; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CNY") {
-                var value = xmrAmount * <?php echo $CNY; ?>;
+            }
+        } else if (selectBox == "HKD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $HKD; ?> + <?php echo $HKD_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "XAU") {
-                var value = xmrAmount * <?php echo $XAU; ?>;
-                fiatValue.value = value.toFixed(6);
-            } else if (selectBox == "XAG") {
-                var value = xmrAmount * <?php echo $XAG; ?>;
-                fiatValue.value = value.toFixed(3);
-            } else if (selectBox == "VND") {
-                var value = xmrAmount * <?php echo $VND; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $HKD; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "VEF") {
-                var value = xmrAmount * <?php echo $VEF; ?>;
+            }
+        } else if (selectBox == "SGD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $SGD; ?> + <?php echo $SGD_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "THB") {
-                var value = xmrAmount * <?php echo $THB; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $SGD; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "SAR") {
-                var value = xmrAmount * <?php echo $SAR; ?>;
+            }
+        } else if (selectBox == "GBP") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $GBP; ?> + <?php echo $GBP_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "SEK") {
-                var value = xmrAmount * <?php echo $SEK; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $GBP; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "PKR") {
-                var value = xmrAmount * <?php echo $PKR; ?>;
+            }
+        } else if (selectBox == "RUB") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $RUB; ?> + <?php echo $RUB_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "NZD") {
-                var value = xmrAmount * <?php echo $NZD; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $RUB; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "PHP") {
-                var value = xmrAmount * <?php echo $PHP; ?>;
+            }
+        } else if (selectBox == "ZAR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $ZAR; ?> + <?php echo $ZAR_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "NOK") {
-                var value = xmrAmount * <?php echo $NOK; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $ZAR; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "LKR") {
-                var value = xmrAmount * <?php echo $LKR; ?>;
+            }
+        } else if (selectBox == "TRY") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $TRY; ?> + <?php echo $TRY_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "MMK") {
-                var value = xmrAmount * <?php echo $MMK; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $TRY; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "HUF") {
-                var value = xmrAmount * <?php echo $HUF; ?>;
+            }
+        } else if (selectBox == "JPY") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $JPY; ?> + <?php echo $JPY_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ILS") {
-                var value = xmrAmount * <?php echo $ILS; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $JPY; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "KWD") {
-                var value = xmrAmount * <?php echo $KWD; ?>;
+            }
+        } else if (selectBox == "PLN") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $PLN; ?> + <?php echo $PLN_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "NGN") {
-                var value = xmrAmount * <?php echo $NGN; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $PLN; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "IDR") {
-                var value = xmrAmount * <?php echo $IDR; ?>;
+            }
+        } else if (selectBox == "INR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $INR; ?> + <?php echo $INR_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "TWD") {
-                var value = xmrAmount * <?php echo $TWD; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $INR; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ARS") {
-                var value = xmrAmount * <?php echo $ARS; ?>;
+            }
+        } else if (selectBox == "AED") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $AED; ?> + <?php echo $AED_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BDT") {
-                var value = xmrAmount * <?php echo $BDT; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $AED; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BHD") {
-                var value = xmrAmount * <?php echo $BHD; ?>;
+            }
+        } else if (selectBox == "ETH") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $ETH; ?> + <?php echo $ETH_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(8);
+            } else {
+                let value = xmrAmount * <?php echo $ETH; ?>;
+                fiatValue.value = value.toFixed(8);
+            }
+        } else if (selectBox == "UAH") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $UAH; ?> + <?php echo $UAH_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BMD") {
-                var value = xmrAmount * <?php echo $BMD; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $UAH; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CZK") {
-                var value = xmrAmount * <?php echo $CZK; ?>;
+            }
+        } else if (selectBox == "KRW") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $KRW; ?> + <?php echo $KRW_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CLP") {
-                var value = xmrAmount * <?php echo $CLP; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $KRW; ?>;
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "DKK") {
-                var value = xmrAmount * <?php echo $DKK; ?>;
+            }
+        } else if (selectBox == "BRL") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $BRL; ?> + <?php echo $BRL_lm; ?>) / 2);
                 fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "MXN") {
-                var value = xmrAmount * <?php echo $MXN; ?>;
+            } else {
+                let value = xmrAmount * <?php echo $BRL; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "MYR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $MYR; ?> + <?php echo $MYR_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $MYR; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "CNY") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $CNY; ?> + <?php echo $CNY_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $CNY; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "XAU") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $XAU; ?> + <?php echo $XAU_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(8);
+            } else {
+                let value = xmrAmount * <?php echo $XAU; ?>;
+                fiatValue.value = value.toFixed(8);
+            }
+        } else if (selectBox == "XAG") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $XAG; ?> + <?php echo $XAG_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(8);
+            } else {
+                let value = xmrAmount * <?php echo $XAG; ?>;
+                fiatValue.value = value.toFixed(8);
+            }
+        } else if (selectBox == "VND") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $VND; ?> + <?php echo $VND_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $VND; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "VEF") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $VEF; ?> + <?php echo $VEF_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $VEF; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "THB") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $THB; ?> + <?php echo $THB_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $THB; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "SAR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $SAR; ?> + <?php echo $SAR_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $SAR; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "SEK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $SEK; ?> + <?php echo $SEK_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $SEK; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "PKR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $PKR; ?> + <?php echo $PKR_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $PKR; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "NZD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $NZD; ?> + <?php echo $NZD_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $NZD; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "PHP") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $PHP; ?> + <?php echo $PHP_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $PHP; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "NOK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $NOK; ?> + <?php echo $NOK_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $NOK; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "LKR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $LKR; ?> + <?php echo $LKR_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $LKR; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "MMK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $MMK; ?> + <?php echo $MMK_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $MMK; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "HUF") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $HUF; ?> + <?php echo $HUF_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $HUF; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "ILS") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $ILS; ?> + <?php echo $ILS_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $ILS; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "KWD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $KWD; ?> + <?php echo $KWD_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $KWD; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "NGN") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $NGN; ?> + <?php echo $NGN_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $NGN; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "IDR") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $IDR; ?> + <?php echo $IDR_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $IDR; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "TWD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $TWD; ?> + <?php echo $TWD_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $TWD; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "ARS") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $ARS; ?> + <?php echo $ARS_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $ARS; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "BDT") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $BDT; ?> + <?php echo $BDT_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $BDT; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "BHD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $BHD; ?> + <?php echo $BHD_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $BHD; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "BMD") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $BMD; ?> + <?php echo $BMD_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $BMD; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "CZK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $CZK; ?> + <?php echo $CZK_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $CZK; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "CLP") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $CLP; ?> + <?php echo $CLP_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $CLP; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "DKK") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $DKK; ?> + <?php echo $DKK_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $DKK; ?>;
+                fiatValue.value = value.toFixed(2);
+            }
+        } else if (selectBox == "MXN") {
+            if ($('input.localmonero-check').is(':checked')) {
+                let value = xmrAmount * ((<?php echo $MXN; ?> + <?php echo $MXN_lm; ?>) / 2);
+                fiatValue.value = value.toFixed(2);
+            } else {
+                let value = xmrAmount * <?php echo $MXN; ?>;
                 fiatValue.value = value.toFixed(2);
             }
         }
-    </script>
+    }
+</script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript">
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+    </script>
+    <script type="text/javascript">
+    function copyToClipBoardXMR() {
+        var content = document.getElementById('xmrInput');
+        content.select();
+        document.execCommand('copy');
+    }
+
+    function copyToClipBoardFiat() {
+        var content = document.getElementById('fiatInput');
+        content.select();
+        document.execCommand('copy');
+    }
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        if ($('input.localmonero-check').is(':checked')) {
+            document.getElementById('localmonero-info').classList.add("localmonero-info");
+        } else {
+            document.getElementById('localmonero-info').classList.remove("localmonero-info");
+        }
+    });
+
+    $('input.localmonero-check').on('change', function(){
+        if ($('input.localmonero-check').is(':checked')) {
+            document.getElementById('localmonero-info').classList.add("localmonero-info");
+        } else {
+            document.getElementById('localmonero-info').classList.remove("localmonero-info");
+        }
+    });
     </script>
 </body>
 </html>
