@@ -11,6 +11,8 @@ $title_h1 = "conversion to"; // ↓ XMR umrechnung nach ↓
 // Info Text
 $info = "The exchange rates on this site are for information purposes only. They are not guaranteed to be accurate, and are subject to change without notice. The exchange rates are updated every 5 Seconds. Last at <u>".$time."</u> clock, Europe/Berlin. Data provided by <a class='text-white' href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a>";
 
+$clipboard_copy_tooltip = "Copy to clipboard";
+
 // Tooltip Titel
 $l_eur = "Euro";
 $l_btc = "Bitcoin";
