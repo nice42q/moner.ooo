@@ -9,7 +9,11 @@ $meta_keywords = "Monero, XMR, fiat, valore, tasso, live, scambio, conversione";
 $title_h1 = "conversione in"; // ↓ XMR umrechnung nach ↓
 
 // Info Text
-$info = "I tassi di cambio su questo sito sono solo a scopo informativo. Non è garantita la loro accuratezza e sono soggetti a modifiche senza preavviso. I tassi di cambio sono aggiornati ogni 5 secondi. Ultimo alle <u>".$time."</u>, Europa/Berlino. Dati forniti da <a class='text-white' href='https://www.coingecko.com/it/monete/monero' hreflang='it' rel='external' target='_blank'>CoinGecko</a>.<br/><a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a>";
+$info = "I tassi di cambio su questo sito sono solo a scopo informativo. Non è garantita la loro accuratezza e sono soggetti a modifiche senza preavviso. I tassi di cambio sono aggiornati ogni 5 secondi. Ultimo alle <u>".$time."</u>, Europa/Berlino. Dati forniti da <a class='text-white' href='https://www.coingecko.com/it/monete/monero' hreflang='it' rel='external' target='_blank'>CoinGecko</a> <s id='localmonero-info' class='localmonero-info'>e <a class='text-white' href='https://localmonero.co/' rel='external' target='_blank'>LocalMonero</a></s>.<br/><a target='_blank' href='https://kuno.anne.media/lang/it/' rel='external' hreflang='it'><img style='max-height: 17px;' src='./img/monero_icon2.png'></a>
+<a target='_blank' href='https://kuno.anne.media/lang/it/' class='text-white' rel='external' hreflang='it'>Kuno – Raccogli fondi con Monero</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a>";
+
+$clipboard_copy_tooltip = "Copia negli appunti";
+$localmonero_tooltip = "Consider LocalMonero courses";
 
 // Tooltip Titel
 $l_eur = "Euro";
