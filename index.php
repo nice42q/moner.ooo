@@ -68,8 +68,13 @@ $MXN = $api->mxn;
 // Lädt die Sprachdatei, nach der Sprache die im Browser eingestellt wurde
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
-$acceptLang = ['de','es','it','zh']; 
+if($lang == 'zh'){
+	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
+}
+
+$acceptLang = ['de','es','it','zh-CN'];
 $lang = in_array($lang, $acceptLang) ? $lang : 'en';
+$lang = strtolower($lang);
 require_once "lang/{$lang}.php"; 
 
 if(isset($_GET["in"])) {
