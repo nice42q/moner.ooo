@@ -4,69 +4,125 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
+$array = array("EUR",
+	"BTC",
+	"USD",
+	"GBP",
+	"CHF",
+	"RUB",
+	"CNY",
+	"JPY",
+	"IDR",
+	"KRW",
+	"TRY",
+	"AUD",
+	"BMD",
+	"CAD",
+	"HKD",
+	"NZD",
+	"SGD",
+	"TWD",
+	"ILS",
+	"PLN",
+	"ZAR",
+	"CZK",
+	"DKK",
+	"NOK",
+	"SEK",
+	"ARS",
+	"CLP",
+	"PHP",
+	"MXN",
+	"BHD",
+	"KWD",
+	"BRL",
+	"MYR",
+	"VEF",
+	"UAH",
+	"VND",
+	"BDT",
+	"HUF",
+	"MMK",
+	"NGN",
+	"THB",
+	"AED",
+	"SAR",
+	"PKR",
+	"LKR",
+	"INR",
+	"BTC",
+	"LTC",
+	"ETH",
+	"XAG",
+	"XAU");
+
 include('coingecko.php');
 
 // Holt die API Daten
-$api = json_decode(file_get_contents('coingecko.json'));
+$api_cg = json_decode(file_get_contents('coingecko.json'));
 
 // Holt die Zeit der letzten Abfrage
-$time = date("H:i:s", $api->time);
+$time_cg = date("H:i:s", $api_cg->time);
+$time = $time_cg;
 
 // Holt die einzelnen Werte für die Berechnung
-$BTC = $api->btc;
-$EUR = $api->eur;
-$USD = $api->usd;
-$CHF = $api->chf;
-$LTC = $api->ltc;
-$CAD = $api->cad;
-$AUD = $api->aud;
-$HKD = $api->hkd;
-$SGD = $api->sgd;
-$GBP = $api->gbp;
-$RUB = $api->rub;
-$ZAR = $api->zar;
-$TRY = $api->try;
-$JPY = $api->jpy;
-$PLN = $api->pln;
-$INR = $api->inr;
-$AED = $api->aed;
-$ETH = $api->eth;
-$UAH = $api->uah;
-$KRW = $api->krw;
-$BRL = $api->brl;
-$MYR = $api->myr;
-$CNY = $api->cny;
-$XAU = $api->xau;
-$XAG = $api->xag;
-$XDR = $api->xdr;
-$VND = $api->vnd;
-$VEF = $api->vef;
-$THB = $api->thb;
-$SAR = $api->sar;
-$SEK = $api->sek;
-$PKR = $api->pkr;
-$NOK = $api->nok;
-$LKR = $api->lkr;
-$MMK = $api->mmk;
-$HUF = $api->huf;
-$ILS = $api->ils;
-$KWD = $api->kwd;
-$NGN = $api->ngn;
-$NZD = $api->nzd;
-$PHP = $api->php;
-$IDR = $api->idr;
-$TWD = $api->twd;
-$ARS = $api->ars;
-$BDT = $api->bdt;
-$BHD = $api->bhd;
-$BMD = $api->bmd;
-$CLP = $api->clp;
-$CZK = $api->czk;
-$DKK = $api->dkk;
-$MXN = $api->mxn;
+$BTC = $api_cg->btc->lastValue;
+$EUR = $api_cg->eur->lastValue;
+$USD = $api_cg->usd->lastValue;
+$CHF = $api_cg->chf->lastValue;
+$LTC = $api_cg->ltc->lastValue;
+$CAD = $api_cg->cad->lastValue;
+$AUD = $api_cg->aud->lastValue;
+$HKD = $api_cg->hkd->lastValue;
+$SGD = $api_cg->sgd->lastValue;
+$GBP = $api_cg->gbp->lastValue;
+$RUB = $api_cg->rub->lastValue;
+$ZAR = $api_cg->zar->lastValue;
+$TRY = $api_cg->try->lastValue;
+$JPY = $api_cg->jpy->lastValue;
+$PLN = $api_cg->pln->lastValue;
+$INR = $api_cg->inr->lastValue;
+$AED = $api_cg->aed->lastValue;
+$ETH = $api_cg->eth->lastValue;
+$UAH = $api_cg->uah->lastValue;
+$KRW = $api_cg->krw->lastValue;
+$BRL = $api_cg->brl->lastValue;
+$MYR = $api_cg->myr->lastValue;
+$CNY = $api_cg->cny->lastValue;
+$XAU = $api_cg->xau->lastValue;
+$XAG = $api_cg->xag->lastValue;
+$VND = $api_cg->vnd->lastValue;
+$VEF = $api_cg->vef->lastValue;
+$THB = $api_cg->thb->lastValue;
+$SAR = $api_cg->sar->lastValue;
+$SEK = $api_cg->sek->lastValue;
+$PKR = $api_cg->pkr->lastValue;
+$NOK = $api_cg->nok->lastValue;
+$LKR = $api_cg->lkr->lastValue;
+$MMK = $api_cg->mmk->lastValue;
+$HUF = $api_cg->huf->lastValue;
+$ILS = $api_cg->ils->lastValue;
+$KWD = $api_cg->kwd->lastValue;
+$NGN = $api_cg->ngn->lastValue;
+$NZD = $api_cg->nzd->lastValue;
+$PHP = $api_cg->php->lastValue;
+$IDR = $api_cg->idr->lastValue;
+$TWD = $api_cg->twd->lastValue;
+$ARS = $api_cg->ars->lastValue;
+$BDT = $api_cg->bdt->lastValue;
+$BHD = $api_cg->bhd->lastValue;
+$BMD = $api_cg->bmd->lastValue;
+$CLP = $api_cg->clp->lastValue;
+$CZK = $api_cg->czk->lastValue;
+$DKK = $api_cg->dkk->lastValue;
+$MXN = $api_cg->mxn->lastValue;
 
 // Lädt die Sprachdatei, nach der Sprache die im Browser eingestellt wurde
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+if(array_key_exists('HTTP_ACCEPT_LANGUAGE', $_SERVER)){
+    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+}else{
+    $lang = "en";
+}
 
 if($lang == 'zh'){
 	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
@@ -191,8 +247,10 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
 <!DOCTYPE html>
 <html lang="<?php echo $lang_meta; ?>">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="true" /> 
+    <meta name="MobileOptimized" content="320" /> 
     
     <title lang="<?php echo $lang_meta; ?>"><?php echo $page_title; ?></title>
     <meta name="description" lang="<?php echo $lang_meta; ?>" content="<?php echo $meta_description; ?>"/>
@@ -206,27 +264,26 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-startup-image" href="img/favicon-196x196.png" />
     <link rel="icon" type="image/png" href="img/favicon-196x196.png" sizes="196x196" />
     <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="img/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Moner.ooo"/>
+    <meta name="application-name" content="Moner.ooo" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="img/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="img/mstile-70x70.png" />
     <meta name="msapplication-square150x150logo" content="img/mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="img/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="img/mstile-310x310.png" />
-    <meta name="theme-color" content="#193e4c">
-    <meta name="apple-mobile-web-app-title" content="Moner.ooo">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#193e4c">
+    <meta name="theme-color" content="#193e4c" />
+    <meta name="apple-mobile-web-app-title" content="Moner.ooo" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#193e4c" />
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     
-    <!---- style anpassung -->
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/fonts/Montserrat.css" rel="stylesheet">
+    <link href="css/fonts/Montserrat.css" rel="stylesheet" />
     
     <style>
         html {
@@ -240,93 +297,90 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
         body {
             background-color: transparent;
         }
-        p.fiat-info{
-            color:#4d4d4d;
-        }
-        p.fiat-info span,
-        a.fiat-tooltip{
-            color:white;
-        }
-        .btn{
-            padding: 2px;
-            margin-bottom: 5px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            min-width: 38px;
-        }
-        @media only screen and (max-width: 475px) {
-            .btn{
-                padding: 1px;
-                font-size: 0.6rem;
-            }
-        }
     </style>
+
+    <link href="css/custom.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container pt-4">
-        <div class="row">
-            <div class="col"></div>
-            
-            <div class="col-10">
+        <div class="row">            
+            <div class="col-12">
                 <div class="cursor-default text-center text-white">
                     <h1 lang="<?php echo $lang_meta; ?>"><span style="color:#4d4d4d;">&darr;</span>&nbsp;<span style="color:#ff6600;" title="Monero">XMR</span>&nbsp;<?php echo $title_h1;?>&nbsp;<span style="color:#4d4d4d;">&darr;</span></h1>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/'><b><?php echo $l_eur; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">EUR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=USD'><b><?php echo $l_usd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">USD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=GBP'><b><?php echo $l_gbp; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">GBP</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CHF'><b><?php echo $l_chf; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CHF</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=RUB'><b><?php echo $l_rub; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">RUB</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CNY'><b><?php echo $l_cny; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CNY</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=JPY'><b><?php echo $l_jpy; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">JPY</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=IDR'><b><?php echo $l_idr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">IDR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KRW'><b><?php echo $l_krw; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KRW</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TRY'><b><?php echo $l_try; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TRY</button><br/>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AUD'><b><?php echo $l_aud; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AUD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BMD'><b><?php echo $l_bmd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BMD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CAD'><b><?php echo $l_cad; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CAD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=HKD'><b><?php echo $l_hkd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">HKD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NZD'><b><?php echo $l_nzd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NZD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SGD'><b><?php echo $l_sgd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SGD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TWD'><b><?php echo $l_twd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TWD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ILS'><b><?php echo $l_ils; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ILS</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PLN'><b><?php echo $l_pln; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PLN</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ZAR'><b><?php echo $l_zar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ZAR</button><br/>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CZK'><b><?php echo $l_czk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CZK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=DKK'><b><?php echo $l_dkk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">DKK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NOK'><b><?php echo $l_nok; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NOK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SEK'><b><?php echo $l_sek; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SEK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ARS'><b><?php echo $l_ars; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ARS</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CLP'><b><?php echo $l_clp; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CLP</button>                
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PHP'><b><?php echo $l_php; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PHP</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MXN'><b><?php echo $l_mxn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MXN</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BHD'><b><?php echo $l_bhd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BHD</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KWD'><b><?php echo $l_kwd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KWD</button><br/>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BRL'><b><?php echo $l_brl; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BRL</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MYR'><b><?php echo $l_myr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MYR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VEF'><b><?php echo $l_vef; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VEF</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=UAH'><b><?php echo $l_uah; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">UAH</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VND'><b><?php echo $l_vnd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VND</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BDT'><b><?php echo $l_bdt; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BDT</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=HUF'><b><?php echo $l_huf; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">HUF</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MMK'><b><?php echo $l_mmk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MMK</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NGN'><b><?php echo $l_ngn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NGN</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=THB'><b><?php echo $l_thb; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">THB</button><br/>
-                    <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AED'><b><?php echo $l_aed; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AED</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SAR'><b><?php echo $l_sar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SAR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PKR'><b><?php echo $l_pkr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PKR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=LKR'><b><?php echo $l_lkr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">LKR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=INR'><b><?php echo $l_inr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">INR</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BTC'><b><?php echo $l_btc; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BTC</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=LTC'><b><?php echo $l_ltc; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">LTC</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ETH'><b><?php echo $l_eth; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ETH</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAG'><b><?php echo $l_xag; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAG</button>
-                    | <button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAU'><b><?php echo $l_xau; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAU</button>
+                    <div class="fiat-btns table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/'><b><?php echo $l_eur; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">EUR</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=USD'><b><?php echo $l_usd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">USD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=GBP'><b><?php echo $l_gbp; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">GBP</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CHF'><b><?php echo $l_chf; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CHF</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=RUB'><b><?php echo $l_rub; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">RUB</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CNY'><b><?php echo $l_cny; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CNY</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=JPY'><b><?php echo $l_jpy; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">JPY</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=IDR'><b><?php echo $l_idr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">IDR</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KRW'><b><?php echo $l_krw; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KRW</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TRY'><b><?php echo $l_try; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TRY</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AUD'><b><?php echo $l_aud; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AUD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BMD'><b><?php echo $l_bmd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BMD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CAD'><b><?php echo $l_cad; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CAD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=HKD'><b><?php echo $l_hkd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">HKD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NZD'><b><?php echo $l_nzd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NZD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SGD'><b><?php echo $l_sgd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SGD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TWD'><b><?php echo $l_twd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TWD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ILS'><b><?php echo $l_ils; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ILS</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PLN'><b><?php echo $l_pln; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PLN</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ZAR'><b><?php echo $l_zar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ZAR</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CZK'><b><?php echo $l_czk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CZK</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=DKK'><b><?php echo $l_dkk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">DKK</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NOK'><b><?php echo $l_nok; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NOK</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SEK'><b><?php echo $l_sek; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SEK</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ARS'><b><?php echo $l_ars; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ARS</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CLP'><b><?php echo $l_clp; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CLP</button></td>           
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PHP'><b><?php echo $l_php; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PHP</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MXN'><b><?php echo $l_mxn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MXN</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BHD'><b><?php echo $l_bhd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BHD</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KWD'><b><?php echo $l_kwd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KWD</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BRL'><b><?php echo $l_brl; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BRL</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MYR'><b><?php echo $l_myr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MYR</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VEF'><b><?php echo $l_vef; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VEF</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=UAH'><b><?php echo $l_uah; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">UAH</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=VND'><b><?php echo $l_vnd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">VND</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BDT'><b><?php echo $l_bdt; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BDT</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=HUF'><b><?php echo $l_huf; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">HUF</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MMK'><b><?php echo $l_mmk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MMK</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NGN'><b><?php echo $l_ngn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NGN</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=THB'><b><?php echo $l_thb; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">THB</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AED'><b><?php echo $l_aed; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AED</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SAR'><b><?php echo $l_sar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SAR</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PKR'><b><?php echo $l_pkr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PKR</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=LKR'><b><?php echo $l_lkr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">LKR</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=INR'><b><?php echo $l_inr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">INR</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BTC'><b><?php echo $l_btc; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BTC</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=LTC'><b><?php echo $l_ltc; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">LTC</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ETH'><b><?php echo $l_eth; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ETH</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAG'><b><?php echo $l_xag; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAG</button></td>
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAU'><b><?php echo $l_xau; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAU</button></td>
+                                </tr>    
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <hr class="gold" />
                 
                 <div class="input-group">
-                    <input class="form-control" id="xmrInput" type="text" spellcheck="false" autocorrect="off" inputmode="numeric" aria-describedby="basic-addon-xmr" value="1" onchange="xmrConvert(this.value)" onkeyup="this.value = this.value.replace(/[^\.^,\d]/g, ''); this.value = this.value.replace(/\,/, '.'); if(this.value.split('.').length > 2){this.value = this.value.slice(0, -1);} xmrConvert(this.value)">
-                    <input class="input-group-text" id="basic-addon-xmr" type="text" value="XMR" disabled>
+                    <button onclick="copyToClipBoardXMR()" class="btn-outline-secondary input-group-text clipboard-copy" title="<?php echo $clipboard_copy_tooltip; ?>" data-toggle="tooltip" data-bs-html="true" data-placement="top">&#128203;</button>
+                    <input class="form-control" id="xmrInput" type="text" spellcheck="false" autocorrect="off" inputmode="numeric" aria-label="<?php echo $l_xmrInput; ?>" aria-describedby="basic-addon-xmr" value="1" onchange="xmrConvert(this.value)" onkeyup="this.value = this.value.replace(/[^\.^,\d]/g, ''); this.value = this.value.replace(/\,/, '.'); if(this.value.split('.').length > 2){this.value = this.value.slice(0, -1);} xmrConvert(this.value)">
+                    <input class="input-group-text" id="basic-addon-xmr" type="text" value="XMR" aria-label="Monero" disabled>
                 </div>
                 
                 <div class="equals-box">
@@ -334,408 +388,421 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                 </div>
                 
                 <div class="fiatDiv input-group">
-                    <input class="form-control" id="fiatInput" type="text" spellcheck="false" autocorrect="off" inputmode="numeric" value="<?php echo $xmr_in_fiat; ?>" onchange="fiatConvert(this.value)" onkeyup="this.value = this.value.replace(/[^\.^,\d]/g, ''); this.value = this.value.replace(/\,/, '.'); if(this.value.split('.').length > 2){this.value = this.value.slice(0, -1);} fiatConvert(this.value)">
-                    <select class="input-group-text cursor-pointer" id="selectBox" onchange="xmrConvert(this.value)">
+                    <button onclick="copyToClipBoardFiat()" class="btn-outline-secondary input-group-text clipboard-copy" title="<?php echo $clipboard_copy_tooltip; ?>" data-toggle="tooltip" data-bs-html="true" data-placement="top">&#128203;</button>
+                    <input class="form-control" id="fiatInput" type="text" spellcheck="false" autocorrect="off" inputmode="numeric" aria-label="<?php echo $l_fiatInput; ?>" value="<?php echo $xmr_in_fiat; ?>" onchange="fiatConvert(this.value)" onkeyup="this.value = this.value.replace(/[^\.^,\d]/g, ''); this.value = this.value.replace(/\,/, '.'); if(this.value.split('.').length > 2){this.value = this.value.slice(0, -1);} fiatConvert(this.value)">
+                    <select class="input-group-text cursor-pointer" id="selectBox" onchange="xmrConvert(this.value)" aria-label="<?php echo $l_fiatSelect; ?>">
                         <?php
                         if(isset($xmr_in)){
                             echo '<option value="'.$xmr_in.'">'.$xmr_in.'</option>';
                         }
                         ?>
-                        <option value="EUR">EUR</option>
-                        <option value="USD">USD</option>
-                        <option value="GBP">GBP</option>
-                        <option value="CHF">CHF</option>
-                        <option value="RUB">RUB</option>
-                        <option value="CNY">CNY</option>
-                        <option value="JPY">JPY</option>
-                        <option value="IDR">IDR</option>
-                        <option value="KRW">KRW</option>
-                        <option value="TRY">TRY</option>
-                        <option value="AUD">AUD</option>
-                        <option value="BMD">BMD</option>
-                        <option value="CAD">CAD</option>
-                        <option value="HKD">HKD</option>
-                        <option value="NZD">NZD</option>
-                        <option value="SGD">SGD</option>
-                        <option value="TWD">TWD</option>
-                        <option value="ILS">ILS</option>
-                        <option value="PLN">PLN</option>
-                        <option value="ZAR">ZAR</option>
-                        <option value="CZK">CZK</option>
-                        <option value="DKK">DKK</option>
-                        <option value="NOK">NOK</option>
-                        <option value="SEK">SEK</option>
-                        <option value="ARS">ARS</option>
-                        <option value="CLP">CLP</option>
-                        <option value="PHP">PHP</option>
-                        <option value="MXN">MXN</option>
-                        <option value="BHD">BHD</option>
-                        <option value="KWD">KWD</option>
-                        <option value="BRL">BRL</option>
-                        <option value="MYR">MYR</option>
-                        <option value="VEF">VEF</option>
-                        <option value="UAH">UAH</option>
-                        <option value="VND">VND</option>
-                        <option value="BDT">BDT</option>
-                        <option value="HUF">HUF</option>
-                        <option value="MMK">MMK</option>
-                        <option value="NGN">NGN</option>
-                        <option value="THB">THB</option>
-                        <option value="AED">AED</option>
-                        <option value="SAR">SAR</option>
-                        <option value="PKR">PKR</option>
-                        <option value="LKR">LKR</option>
-                        <option value="INR">INR</option>
-                        <option value="BTC">BTC</option>
-                        <option value="LTC">LTC</option>
-                        <option value="ETH">ETH</option>
-                        <option value="XAG">XAG</option>
-                        <option value="XAU">XAU</option>
+                        <option value="EUR" label="<?php echo $l_eur; ?>">EUR</option>
+                        <option value="USD" label="<?php echo $l_usd; ?>">USD</option>
+                        <option value="GBP" label="<?php echo $l_gbp; ?>">GBP</option>
+                        <option value="CHF" label="<?php echo $l_chf; ?>">CHF</option>
+                        <option value="RUB" label="<?php echo $l_rub; ?>">RUB</option>
+                        <option value="CNY" label="<?php echo $l_cny; ?>">CNY</option>
+                        <option value="JPY" label="<?php echo $l_jpy; ?>">JPY</option>
+                        <option value="IDR" label="<?php echo $l_idr; ?>">IDR</option>
+                        <option value="KRW" label="<?php echo $l_krw; ?>">KRW</option>
+                        <option value="TRY" label="<?php echo $l_try; ?>">TRY</option>
+                        <option value="AUD" label="<?php echo $l_aud; ?>">AUD</option>
+                        <option value="BMD" label="<?php echo $l_bmd; ?>">BMD</option>
+                        <option value="CAD" label="<?php echo $l_cad; ?>">CAD</option>
+                        <option value="HKD" label="<?php echo $l_hkd; ?>">HKD</option>
+                        <option value="NZD" label="<?php echo $l_nzd; ?>">NZD</option>
+                        <option value="SGD" label="<?php echo $l_sgd; ?>">SGD</option>
+                        <option value="TWD" label="<?php echo $l_twd; ?>">TWD</option>
+                        <option value="ILS" label="<?php echo $l_ils; ?>">ILS</option>
+                        <option value="PLN" label="<?php echo $l_pln; ?>">PLN</option>
+                        <option value="ZAR" label="<?php echo $l_zar; ?>">ZAR</option>
+                        <option value="CZK" label="<?php echo $l_czk; ?>">CZK</option>
+                        <option value="DKK" label="<?php echo $l_dkk; ?>">DKK</option>
+                        <option value="NOK" label="<?php echo $l_nok; ?>">NOK</option>
+                        <option value="SEK" label="<?php echo $l_sek; ?>">SEK</option>
+                        <option value="ARS" label="<?php echo $l_ars; ?>">ARS</option>
+                        <option value="CLP" label="<?php echo $l_clp; ?>">CLP</option>
+                        <option value="PHP" label="<?php echo $l_php; ?>">PHP</option>
+                        <option value="MXN" label="<?php echo $l_mxn; ?>">MXN</option>
+                        <option value="BHD" label="<?php echo $l_bhd; ?>">BHD</option>
+                        <option value="KWD" label="<?php echo $l_kwd; ?>">KWD</option>
+                        <option value="BRL" label="<?php echo $l_brl; ?>">BRL</option>
+                        <option value="MYR" label="<?php echo $l_myr; ?>">MYR</option>
+                        <option value="VEF" label="<?php echo $l_vef; ?>">VEF</option>
+                        <option value="UAH" label="<?php echo $l_uah; ?>">UAH</option>
+                        <option value="VND" label="<?php echo $l_vnd; ?>">VND</option>
+                        <option value="BDT" label="<?php echo $l_bdt; ?>">BDT</option>
+                        <option value="HUF" label="<?php echo $l_huf; ?>">HUF</option>
+                        <option value="MMK" label="<?php echo $l_mmk; ?>">MMK</option>
+                        <option value="NGN" label="<?php echo $l_ngn; ?>">NGN</option>
+                        <option value="THB" label="<?php echo $l_thb; ?>">THB</option>
+                        <option value="AED" label="<?php echo $l_aed; ?>">AED</option>
+                        <option value="SAR" label="<?php echo $l_sar; ?>">SAR</option>
+                        <option value="PKR" label="<?php echo $l_pkr; ?>">PKR</option>
+                        <option value="LKR" label="<?php echo $l_lkr; ?>">LKR</option>
+                        <option value="INR" label="<?php echo $l_inr; ?>">INR</option>
+                        <option value="BTC" label="<?php echo $l_btc; ?>">BTC</option>
+                        <option value="LTC" label="<?php echo $l_ltc; ?>">LTC</option>
+                        <option value="ETH" label="<?php echo $l_eth; ?>">ETH</option>
+                        <option value="XAG" label="<?php echo $l_xag; ?>">XAG</option>
+                        <option value="XAU" label="<?php echo $l_xau; ?>">XAU</option>
                     </select>
                 </div>
                 
                 <hr class="gold" />
-                <small class="cursor-default text-white" lang="<?php echo $lang_meta; ?>">
+                <small class="cursor-default text-white text-info" lang="<?php echo $lang_meta; ?>">
                     <?php echo $info; ?>
                 </small>
                 <hr />
                 <small class="cursor-default text-white" lang="<?php echo $lang_meta; ?>">
-                    <?php echo $getmonero; ?>
+                    <?php echo $getmonero.$countrymonero; ?>
                 </small>
             </div>
             
-            <div class="col"></div>
         </div>
     </div>
 
-    <!---- umrechnung bei EUR/BTC/CHF/USD angabe -->
-    <script type="text/javascript">
-        function fiatConvert(value)
-        {
-            var fiatAmount = document.getElementById("fiatInput").value;             // Holt sich den Wert aus dem Eingabefeld
-            var xmrValue = document.getElementById("xmrInput");
-            var selectBox = document.getElementById("selectBox").value;
 
-            if (selectBox == "BTC") {                                                // Welche Umrechnung?
-                var value = fiatAmount / <?php echo number_format($BTC, 8); ?>;      // Die Formel
-                xmrValue.value = value.toFixed(12);                                  // Formatiert und gibt die Umrechnung aus
-            } else if (selectBox == "EUR") {
-                var value = fiatAmount / <?php echo $EUR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "USD") {
-                var value = fiatAmount / <?php echo $USD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CHF") {
-                var value = fiatAmount / <?php echo $CHF; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "LTC") {
-                var value = fiatAmount / <?php echo $LTC; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CAD") {
-                var value = fiatAmount / <?php echo $CAD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "AUD") {
-                var value = fiatAmount / <?php echo $AUD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "HKD") {
-                var value = fiatAmount / <?php echo $HKD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "SGD") {
-                var value = fiatAmount / <?php echo $SGD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "GBP") {
-                var value = fiatAmount / <?php echo $GBP; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "RUB") {
-                var value = fiatAmount / <?php echo $RUB; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ZAR") {
-                var value = fiatAmount / <?php echo $ZAR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "TRY") {
-                var value = fiatAmount / <?php echo $TRY; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "JPY") {
-                var value = fiatAmount / <?php echo $JPY; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "PLN") {
-                var value = fiatAmount / <?php echo $PLN; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "INR") {
-                var value = fiatAmount / <?php echo $INR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "AED") {
-                var value = fiatAmount / <?php echo $AED; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ETH") {
-                var value = fiatAmount / <?php echo $ETH; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "UAH") {
-                var value = fiatAmount / <?php echo $UAH; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "KRW") {
-                var value = fiatAmount / <?php echo $KRW; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BRL") {
-                var value = fiatAmount / <?php echo $BRL; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "MYR") {
-                var value = fiatAmount / <?php echo $MYR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CNY") {
-                var value = fiatAmount / <?php echo $CNY; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "XAG") {
-                var value = fiatAmount / <?php echo $XAG; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "XAU") {
-                var value = fiatAmount / <?php echo $XAU; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "VEF") {
-                var value = fiatAmount / <?php echo $VEF; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "VND") {
-                var value = fiatAmount / <?php echo $VND; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "THB") {
-                var value = fiatAmount / <?php echo $THB; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "SAR") {
-                var value = fiatAmount / <?php echo $SAR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "SEK") {
-                var value = fiatAmount / <?php echo $SEK; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "PKR") {
-                var value = fiatAmount / <?php echo $PKR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "NZD") {
-                var value = fiatAmount / <?php echo $NZD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "PHP") {
-                var value = fiatAmount / <?php echo $PHP; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "NOK") {
-                var value = fiatAmount / <?php echo $NOK; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "LKR") {
-                var value = fiatAmount / <?php echo $LKR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "MMK") {
-                var value = fiatAmount / <?php echo $MMK; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "HUF") {
-                var value = fiatAmount / <?php echo $HUF; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ILS") {
-                var value = fiatAmount / <?php echo $ILS; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "KWD") {
-                var value = fiatAmount / <?php echo $KWD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "NGN") {
-                var value = fiatAmount / <?php echo $NGN; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "IDR") {
-                var value = fiatAmount / <?php echo $IDR; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "TWD") {
-                var value = fiatAmount / <?php echo $TWD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "ARS") {
-                var value = fiatAmount / <?php echo $ARS; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BDT") {
-                var value = fiatAmount / <?php echo $BDT; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BHD") {
-                var value = fiatAmount / <?php echo $BHD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "BMD") {
-                var value = fiatAmount / <?php echo $BMD; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CZK") {
-                var value = fiatAmount / <?php echo $CZK; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "CLP") {
-                var value = fiatAmount / <?php echo $CLP; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "DKK") {
-                var value = fiatAmount / <?php echo $DKK; ?>;
-                xmrValue.value = value.toFixed(12);
-            } else if (selectBox == "MXN") {
-                var value = fiatAmount / <?php echo $MXN; ?>;
-                xmrValue.value = value.toFixed(12);
-            }
-        }
-    </script>
-    <!---- umrechnung bei XMR angabe -->
-    <script type="text/javascript">
-        function xmrConvert(value)
-        {
-            var xmrAmount = document.getElementById("xmrInput").value;
-            var fiatValue = document.getElementById("fiatInput");
-            var selectBox = document.getElementById("selectBox").value;
+<script type="text/javascript">
+    function fiatConvert(value)
+    {
+        let fiatAmount = document.getElementById("fiatInput").value;
+        let xmrValue = document.getElementById("xmrInput");
+        let selectBox = document.getElementById("selectBox").value;
 
-            if (selectBox == "BTC") {
-                var value = xmrAmount * <?php echo number_format($BTC, 8); ?>;
-                fiatValue.value = value.toFixed(8);
-            } else if (selectBox == "EUR") {
-                var value = xmrAmount * <?php echo $EUR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "USD") {
-                var value = xmrAmount * <?php echo $USD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CHF") {
-                var value = xmrAmount * <?php echo $CHF; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "LTC") {
-                var value = xmrAmount * <?php echo $LTC; ?>;
-                fiatValue.value = value.toFixed(8);
-            } else if (selectBox == "CAD") {
-                var value = xmrAmount * <?php echo $CAD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "AUD") {
-                var value = xmrAmount * <?php echo $AUD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "HKD") {
-                var value = xmrAmount * <?php echo $HKD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "SGD") {
-                var value = xmrAmount * <?php echo $SGD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "GBP") {
-                var value = xmrAmount * <?php echo $GBP; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "RUB") {
-                var value = xmrAmount * <?php echo $RUB; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ZAR") {
-                var value = xmrAmount * <?php echo $ZAR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "TRY") {
-                var value = xmrAmount * <?php echo $TRY; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "JPY") {
-                var value = xmrAmount * <?php echo $JPY; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "PLN") {
-                var value = xmrAmount * <?php echo $PLN; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "INR") {
-                var value = xmrAmount * <?php echo $INR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "AED") {
-                var value = xmrAmount * <?php echo $AED; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ETH") {
-                var value = xmrAmount * <?php echo $ETH; ?>;
-                fiatValue.value = value.toFixed(8);
-            } else if (selectBox == "UAH") {
-                var value = xmrAmount * <?php echo $UAH; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "KRW") {
-                var value = xmrAmount * <?php echo $KRW; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BRL") {
-                var value = xmrAmount * <?php echo $BRL; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "MYR") {
-                var value = xmrAmount * <?php echo $MYR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CNY") {
-                var value = xmrAmount * <?php echo $CNY; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "XAU") {
-                var value = xmrAmount * <?php echo $XAU; ?>;
-                fiatValue.value = value.toFixed(6);
-            } else if (selectBox == "XAG") {
-                var value = xmrAmount * <?php echo $XAG; ?>;
-                fiatValue.value = value.toFixed(3);
-            } else if (selectBox == "VND") {
-                var value = xmrAmount * <?php echo $VND; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "VEF") {
-                var value = xmrAmount * <?php echo $VEF; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "THB") {
-                var value = xmrAmount * <?php echo $THB; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "SAR") {
-                var value = xmrAmount * <?php echo $SAR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "SEK") {
-                var value = xmrAmount * <?php echo $SEK; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "PKR") {
-                var value = xmrAmount * <?php echo $PKR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "NZD") {
-                var value = xmrAmount * <?php echo $NZD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "PHP") {
-                var value = xmrAmount * <?php echo $PHP; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "NOK") {
-                var value = xmrAmount * <?php echo $NOK; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "LKR") {
-                var value = xmrAmount * <?php echo $LKR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "MMK") {
-                var value = xmrAmount * <?php echo $MMK; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "HUF") {
-                var value = xmrAmount * <?php echo $HUF; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ILS") {
-                var value = xmrAmount * <?php echo $ILS; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "KWD") {
-                var value = xmrAmount * <?php echo $KWD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "NGN") {
-                var value = xmrAmount * <?php echo $NGN; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "IDR") {
-                var value = xmrAmount * <?php echo $IDR; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "TWD") {
-                var value = xmrAmount * <?php echo $TWD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "ARS") {
-                var value = xmrAmount * <?php echo $ARS; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BDT") {
-                var value = xmrAmount * <?php echo $BDT; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BHD") {
-                var value = xmrAmount * <?php echo $BHD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "BMD") {
-                var value = xmrAmount * <?php echo $BMD; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CZK") {
-                var value = xmrAmount * <?php echo $CZK; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "CLP") {
-                var value = xmrAmount * <?php echo $CLP; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "DKK") {
-                var value = xmrAmount * <?php echo $DKK; ?>;
-                fiatValue.value = value.toFixed(2);
-            } else if (selectBox == "MXN") {
-                var value = xmrAmount * <?php echo $MXN; ?>;
-                fiatValue.value = value.toFixed(2);
-            }
+        if (selectBox == "BTC") {
+                let value = fiatAmount / <?php echo $BTC; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "EUR") {
+                let value = fiatAmount / <?php echo $EUR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "USD") {
+                let value = fiatAmount / <?php echo $USD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "CHF") {
+                let value = fiatAmount / <?php echo $CHF; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "LTC") {
+                let value = fiatAmount / <?php echo $LTC; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "CAD") {
+                let value = fiatAmount / <?php echo $CAD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "AUD") {
+                let value = fiatAmount / <?php echo $AUD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "HKD") {
+                let value = fiatAmount / <?php echo $HKD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "SGD") {
+                let value = fiatAmount / <?php echo $SGD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "GBP") {
+                let value = fiatAmount / <?php echo $GBP; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "RUB") {
+                let value = fiatAmount / <?php echo $RUB; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "ZAR") {
+                let value = fiatAmount / <?php echo $ZAR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "TRY") {
+                let value = fiatAmount / <?php echo $TRY; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "JPY") {
+                let value = fiatAmount / <?php echo $JPY; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "PLN") {
+                let value = fiatAmount / <?php echo $PLN; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "INR") {
+                let value = fiatAmount / <?php echo $INR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "AED") {
+                let value = fiatAmount / <?php echo $AED; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "ETH") {
+                let value = fiatAmount / <?php echo $ETH; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "UAH") {
+                let value = fiatAmount / <?php echo $UAH; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "KRW") {
+                let value = fiatAmount / <?php echo $KRW; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "BRL") {
+                let value = fiatAmount / <?php echo $BRL; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "MYR") {
+                let value = fiatAmount / <?php echo $MYR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "CNY") {
+                let value = fiatAmount / <?php echo $CNY; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "XAG") {
+                let value = fiatAmount / <?php echo $XAG; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "XAU") {
+                let value = fiatAmount / <?php echo $XAU; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "VEF") {
+                let value = fiatAmount / <?php echo $VEF; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "VND") {
+                let value = fiatAmount / <?php echo $VND; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "THB") {
+                let value = fiatAmount / <?php echo $THB; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "SAR") {
+                let value = fiatAmount / <?php echo $SAR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "SEK") {
+                let value = fiatAmount / <?php echo $SEK; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "PKR") {
+                let value = fiatAmount / <?php echo $PKR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "NZD") {
+                let value = fiatAmount / <?php echo $NZD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "PHP") {
+                let value = fiatAmount / <?php echo $PHP; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "NOK") {
+                let value = fiatAmount / <?php echo $NOK; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "LKR") {
+                let value = fiatAmount / <?php echo $LKR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "MMK") {
+                let value = fiatAmount / <?php echo $MMK; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "HUF") {
+                let value = fiatAmount / <?php echo $HUF; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "ILS") {
+                let value = fiatAmount / <?php echo $ILS; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "KWD") {
+                let value = fiatAmount / <?php echo $KWD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "NGN") {
+                let value = fiatAmount / <?php echo $NGN; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "IDR") {
+                let value = fiatAmount / <?php echo $IDR; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "TWD") {
+                let value = fiatAmount / <?php echo $TWD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "ARS") {
+                let value = fiatAmount / <?php echo $ARS; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "BDT") {
+                let value = fiatAmount / <?php echo $BDT; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "BHD") {
+                let value = fiatAmount / <?php echo $BHD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "BMD") {
+                let value = fiatAmount / <?php echo $BMD; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "CZK") {
+                let value = fiatAmount / <?php echo $CZK; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "CLP") {
+                let value = fiatAmount / <?php echo $CLP; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "DKK") {
+                let value = fiatAmount / <?php echo $DKK; ?>;
+                xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "MXN") {
+                let value = fiatAmount / <?php echo $MXN; ?>;
+                xmrValue.value = value.toFixed(12);
         }
-    </script>
+    }
+</script>
+
+<script type="text/javascript">
+    function xmrConvert(value)
+    {
+        let xmrAmount = document.getElementById("xmrInput").value;
+        let fiatValue = document.getElementById("fiatInput");
+        let selectBox = document.getElementById("selectBox").value;
+
+        if (selectBox == "BTC") {
+                let value = xmrAmount * <?php echo $BTC; ?>;
+                fiatValue.value = value.toFixed(8);
+        } else if (selectBox == "EUR") {
+                let value = xmrAmount * <?php echo $EUR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "USD") {
+                let value = xmrAmount * <?php echo $USD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "CHF") {
+                let value = xmrAmount * <?php echo $CHF; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "LTC") {
+                let value = xmrAmount * <?php echo $LTC; ?>;
+                fiatValue.value = value.toFixed(8);
+        } else if (selectBox == "CAD") {
+                let value = xmrAmount * <?php echo $CAD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "AUD") {
+                let value = xmrAmount * <?php echo $AUD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "HKD") {
+                let value = xmrAmount * <?php echo $HKD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "SGD") {
+                let value = xmrAmount * <?php echo $SGD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "GBP") {
+                let value = xmrAmount * <?php echo $GBP; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "RUB") {
+                let value = xmrAmount * <?php echo $RUB; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "ZAR") {
+                let value = xmrAmount * <?php echo $ZAR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "TRY") {
+                let value = xmrAmount * <?php echo $TRY; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "JPY") {
+                let value = xmrAmount * <?php echo $JPY; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "PLN") {
+                let value = xmrAmount * <?php echo $PLN; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "INR") {
+                let value = xmrAmount * <?php echo $INR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "AED") {
+                let value = xmrAmount * <?php echo $AED; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "ETH") {
+                let value = xmrAmount * <?php echo $ETH; ?>;
+                fiatValue.value = value.toFixed(8);
+        } else if (selectBox == "UAH") {
+                let value = xmrAmount * <?php echo $UAH; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "KRW") {
+                let value = xmrAmount * <?php echo $KRW; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "BRL") {
+                let value = xmrAmount * <?php echo $BRL; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "MYR") {
+                let value = xmrAmount * <?php echo $MYR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "CNY") {
+                let value = xmrAmount * <?php echo $CNY; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "XAU") {
+                let value = xmrAmount * <?php echo $XAU; ?>;
+                fiatValue.value = value.toFixed(8);
+        } else if (selectBox == "XAG") {
+                let value = xmrAmount * <?php echo $XAG; ?>;
+                fiatValue.value = value.toFixed(8);
+        } else if (selectBox == "VND") {
+                let value = xmrAmount * <?php echo $VND; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "VEF") {
+                let value = xmrAmount * <?php echo $VEF; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "THB") {
+                let value = xmrAmount * <?php echo $THB; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "SAR") {
+                let value = xmrAmount * <?php echo $SAR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "SEK") {
+                let value = xmrAmount * <?php echo $SEK; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "PKR") {
+                let value = xmrAmount * <?php echo $PKR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "NZD") {
+                let value = xmrAmount * <?php echo $NZD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "PHP") {
+                let value = xmrAmount * <?php echo $PHP; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "NOK") {
+                let value = xmrAmount * <?php echo $NOK; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "LKR") {
+                let value = xmrAmount * <?php echo $LKR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "MMK") {
+                let value = xmrAmount * <?php echo $MMK; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "HUF") {
+                let value = xmrAmount * <?php echo $HUF; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "ILS") {
+                let value = xmrAmount * <?php echo $ILS; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "KWD") {
+                let value = xmrAmount * <?php echo $KWD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "NGN") {
+                let value = xmrAmount * <?php echo $NGN; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "IDR") {
+                let value = xmrAmount * <?php echo $IDR; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "TWD") {
+                let value = xmrAmount * <?php echo $TWD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "ARS") {
+                let value = xmrAmount * <?php echo $ARS; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "BDT") {
+                let value = xmrAmount * <?php echo $BDT; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "BHD") {
+                let value = xmrAmount * <?php echo $BHD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "BMD") {
+                let value = xmrAmount * <?php echo $BMD; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "CZK") {
+                let value = xmrAmount * <?php echo $CZK; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "CLP") {
+                let value = xmrAmount * <?php echo $CLP; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "DKK") {
+                let value = xmrAmount * <?php echo $DKK; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "MXN") {
+                let value = xmrAmount * <?php echo $MXN; ?>;
+                fiatValue.value = value.toFixed(2);
+        }
+    }
+</script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
+    <script type="text/javascript">
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+    </script>
+    <script type="text/javascript">
+    function copyToClipBoardXMR() {
+        var content = document.getElementById('xmrInput');
+        content.select();
+        document.execCommand('copy');
+    }
+
+    function copyToClipBoardFiat() {
+        var content = document.getElementById('fiatInput');
+        content.select();
+        document.execCommand('copy');
+    }
     </script>
 </body>
 </html>
