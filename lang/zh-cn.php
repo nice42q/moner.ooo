@@ -1,18 +1,21 @@
-<?php
-// Translator： Winslow SorenEricMent(逸雩)
-$lang_meta = "zh-CN";
+<?php // Translator： Winslow SorenEricMent(逸雩)
+// For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
+$lang_meta = "zh"; // https://www.w3schools.com/tags/ref_language_codes.asp
 
-$page_title = "门罗币与欧元/BTC/CHF/美元等币种汇率"; // Der Browser Tab Titel bzw. Suchmaschinen Titel
-$meta_description = "门罗币实时多币种汇率，免费提供。"; // Suchmaschinen Beschreibung / Text
-$meta_keywords = "门罗币, XMR, 法币, 价格, 汇率, 实时, 交易, 结汇"; // Suchmaschinen Keywords (angeblich nutzlos)
+$page_title = "门罗币与欧元/BTC/CHF/美元等币种汇率"; // The browser tab title or search engine title
+$meta_description = "门罗币实时多币种汇率，免费提供。"; // Search engine description / text
+$meta_keywords = "门罗币, XMR, 法币, 价格, 汇率, 实时, 交易, 结汇"; // Search engine keywords
 
-$title_h1 = "转换至"; // ↓ XMR umrechnung nach ↓
+$title_h1 = "转换至"; // ↓ XMR [...] ↓
 
 // Info Text
-$info = "本站提供的汇率仅供参考。其精确程度不被保证，且可能在您不注意的情况下发生变更。汇率每5秒钟更新一次。最近一次在欧洲/柏林时间 <u>".$time."</u> 。数据由 <a class='text-white' href='https://www.coingecko.com/zh/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/%E9%97%A8%E7%BD%97%E5%B8%81' hreflang='zh' rel='external' target='_blank'>CoinGecko</a>提供 <s id='localmonero-info' class='localmonero-info'>和 <a class='text-white' href='https://localmonero.co/' rel='external' target='_blank'>LocalMonero</a></s>。<br/><a target='_blank' href='https://kuno.anne.media/' rel='external' hreflang='en'><img style='max-height: 17px;' src='./img/monero_icon2.png' alt='Kuno/Monero-Heart-Icon'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/' class='text-white' rel='external' hreflang='en'>Kuno – Fundraise with Monero</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a>";
+$info = "本站提供的汇率仅供参考。其精确程度不被保证，且可能在您不注意的情况下发生变更。汇率每5秒钟更新一次。最近一次在欧洲/柏林时间 <u title='Hours:Minutes:Seconds (hh:mm:ss)'>".$time."</u> 。数据由 <a class='text-white' href='https://www.coingecko.com/zh/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/%E9%97%A8%E7%BD%97%E5%B8%81' hreflang='zh' rel='external' target='_blank'>CoinGecko</a>。<br/><a target='_blank' href='https://kuno.anne.media/donate/onml/' rel='external' hreflang='en'><img loading='lazy' src='./img/kuno-monero-26x26.png' width='17' height='17' alt='Kuno - Moner.ooo donation page'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/' class='text-white' rel='external' hreflang='en'>Kuno – Fundraise with Monero</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>GitHub</a>";
 
 $clipboard_copy_tooltip = "Copy to clipboard";
-$localmonero_tooltip = "Consider LocalMonero courses";
+
+$l_fiatSelect = "Currency choice";
+$l_fiatInput = "Fiat value input field";
+$l_xmrInput = "Monero value input field";
 
 // Tooltip Titel
 $l_eur = "欧元";
@@ -66,7 +69,8 @@ $l_dkk = "丹麦克朗";
 $l_clp = "智利比索";
 $l_mxn = "墨西哥比索";
 
-// Weitere Monero Links
-$getmonero = '<a class="text-white" href="https://www.getmonero.org/zh-cn/" hreflang="zh-cn" target="_blank" rel="external">官方网站</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">社区众筹系统 (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">门罗币生态圈</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">门罗浏览器</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk播客</a>';
+// More Monero links
+$getmonero = '<a class="text-white" href="https://www.getmonero.org/zh-cn/" hreflang="zh-cn" target="_blank" rel="external">官方网站</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">社区众筹系统 (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">门罗浏览器</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk播客</a>';
+$countrymonero = '';
 
 ?>

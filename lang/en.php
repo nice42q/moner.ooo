@@ -1,18 +1,21 @@
 <?php
-// Für die HTML meta angabe, bspw. <!DOCTYPE html><html lang="de">
-$lang_meta = "en";
+// For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
+$lang_meta = "en"; // https://www.w3schools.com/tags/ref_language_codes.asp
 
-$page_title = "XMR conversion to EUR/BTC/CHF/USD and many more"; // Der Browser Tab Titel bzw. Suchmaschinen Titel
-$meta_description = "The Monero live exchange rate in many different currencies, free for everyone."; // Suchmaschinen Beschreibung / Text
-$meta_keywords = "Monero, XMR, fiat, value, rate, live, exchange, conversion"; // Suchmaschinen Keywords (angeblich nutzlos)
+$page_title = "XMR conversion to EUR/BTC/CHF/USD and many more"; // The browser tab title or search engine title
+$meta_description = "The Monero live exchange rate in many different currencies, free for everyone."; // Search engine description / text
+$meta_keywords = "Monero, XMR, fiat, value, rate, live, exchange, conversion"; // Search engine keywords
 
-$title_h1 = "conversion to"; // ↓ XMR umrechnung nach ↓
+$title_h1 = "conversion to"; // ↓ XMR [...] ↓
 
 // Info Text
-$info = "The exchange rates on this site are for information purposes only. They are not guaranteed to be accurate, and are subject to change without notice. The exchange rates are updated every 5 Seconds. Last at <u>".$time."</u> clock, Europe/Berlin. Data provided by <a class='text-white' href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_blank'>CoinGecko</a> <s id='localmonero-info' class='localmonero-info'>and <a class='text-white' href='https://localmonero.co/' rel='external' target='_blank'>LocalMonero</a></s>.<br/><a target='_blank' href='https://kuno.anne.media/' rel='external' hreflang='en'><img style='max-height: 17px;' src='./img/monero_icon2.png' alt='Kuno/Monero-Heart-Icon'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/' class='text-white' rel='external' hreflang='en'>Kuno – Fundraise with Monero</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>Github</a>";
+$info = "The exchange rates on this site are for information purposes only. They are not guaranteed to be accurate, and are subject to change without notice. The exchange rates are updated every 5 Seconds. Last at <u title='Hours:Minutes:Seconds (hh:mm:ss)'>".$time."</u> clock, Europe/Berlin. Data provided by <a class='text-white' href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_blank'>CoinGecko</a>.<br/><a target='_blank' href='https://kuno.anne.media/donate/onml/' rel='external' hreflang='en'><img loading='lazy' src='./img/kuno-monero-26x26.png' width='17' height='17' alt='Kuno - Moner.ooo donation page'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/' class='text-white' rel='external' hreflang='en'>Kuno – Fundraise with Monero</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>GitHub</a>";
 
 $clipboard_copy_tooltip = "Copy to clipboard";
-$localmonero_tooltip = "Consider LocalMonero courses";
+
+$l_fiatSelect = "Currency choice";
+$l_fiatInput = "Fiat value input field";
+$l_xmrInput = "Monero value input field";
 
 // Tooltip Titel
 $l_eur = "Euro";
@@ -66,7 +69,8 @@ $l_dkk = "Danish Krone";
 $l_clp = "Chilean Peso";
 $l_mxn = "Mexican Peso";
 
-// Weitere Monero Links
-$getmonero = '<a class="text-white" href="https://www.getmonero.org/" hreflang="en" target="_blank" rel="external">Official website</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://moneroecosystem.org/" hreflang="en" target="_blank" rel="external">Monero Ecosystem</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a> | <a class="text-white" href="https://t.me/monero" hreflang="en" target="_blank" rel="external">Telegram - Monero XMR</a>';
+// More Monero links
+$getmonero = '<a class="text-white" href="https://www.getmonero.org/" hreflang="en" target="_blank" rel="external">Official website</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a>';
+$countrymonero = ' | <a class="text-white" href="https://t.me/monero" hreflang="en" target="_blank" rel="external">Telegram - Monero XMR</a> | <a class="text-white" href="https://www.revuo-xmr.com/" hreflang="en" target="_blank" rel="external">Revuo Monero</a>';
 
 ?>
