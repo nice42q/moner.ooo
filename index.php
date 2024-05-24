@@ -781,13 +781,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
         }
     }
 </script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-    </script>
+    <script src="js/main.js">
     <script type="text/javascript">
     function copyToClipBoardXMR() {
         var content = document.getElementById('xmrInput');
