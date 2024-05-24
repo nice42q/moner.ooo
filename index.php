@@ -283,15 +283,12 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
     
     <link href="css/main.css" rel="stylesheet" />
     
-    <link href="css/fonts/Montserrat.css" rel="stylesheet" />
-    
     <style>
         html {
             width: 100%;
             height: 100%;
             background-image: linear-gradient(to bottom right, #013c4a 0, #193e4c 44%, #004b5b 100%)!important;
             color: #fff;
-            font-family: 'Montserrat'!important;
             font-style: normal;
         }
         body {
