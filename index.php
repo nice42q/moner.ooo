@@ -781,7 +781,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
         }
     }
 </script>
-    <script src="js/main.js">
+    <script src="js/main.js"></script>
     <script type="text/javascript">
     function copyToClipBoardXMR() {
         var content = document.getElementById('xmrInput');
