@@ -15,4 +15,4 @@ The language is selected according to the Web-Browser language set; if the langu
 
 Thanks for the support.
 
-The Website uses Bootstrap and the Font [Montserrat](https://fonts.google.com/specimen/Montserrat).
+The Website uses Bootstrap.

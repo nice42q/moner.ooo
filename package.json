@@ -1,0 +1,14 @@
+{
+	"scripts": {
+		"build": "webpack build --mode=production"
+	},
+	"devDependencies": {
+		"purgecss": "^6.0.0"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.11.8",
+		"bootstrap": "^5.3.3",
+		"webpack": "^5.91.0",
+		"webpack-cli": "^5.1.4"
+	}
+}

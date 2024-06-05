@@ -281,9 +281,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
     <meta name="apple-mobile-web-app-title" content="Moner.ooo" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#193e4c" />
     
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    
-    <link href="css/fonts/Montserrat.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
     
     <style>
         html {
@@ -291,7 +289,6 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
             height: 100%;
             background-image: linear-gradient(to bottom right, #013c4a 0, #193e4c 44%, #004b5b 100%)!important;
             color: #fff;
-            font-family: 'Montserrat'!important;
             font-style: normal;
         }
         body {
@@ -784,13 +781,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
         }
     }
 </script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-    </script>
+    <script src="js/main.js">
     <script type="text/javascript">
     function copyToClipBoardXMR() {
         var content = document.getElementById('xmrInput');
