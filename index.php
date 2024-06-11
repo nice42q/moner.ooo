@@ -320,6 +320,18 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KRW'><b><?php echo $l_krw; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KRW</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=TRY'><b><?php echo $l_try; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">TRY</button></td>
                                 </tr>
+                                <tr style="display:none;">
+                                    <td><?php echo str_replace(".", ",", $EUR); ?></td>
+                                    <td><?php echo str_replace(".", ",", $USD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $GBP); ?></td>
+                                    <td><?php echo str_replace(".", ",", $CHF); ?></td>
+                                    <td><?php echo str_replace(".", ",", $RUB); ?></td>
+                                    <td><?php echo str_replace(".", ",", $CNY); ?></td>
+                                    <td><?php echo str_replace(".", ",", $JPY); ?></td>
+                                    <td><?php echo str_replace(".", ",", $IDR); ?></td>
+                                    <td><?php echo str_replace(".", ",", $KRW); ?></td>
+                                    <td><?php echo str_replace(".", ",", $TRY); ?></td>
+                                </tr>
                                 <tr>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AUD'><b><?php echo $l_aud; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AUD</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BMD'><b><?php echo $l_bmd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BMD</button></td>
@@ -331,6 +343,18 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ILS'><b><?php echo $l_ils; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ILS</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=PLN'><b><?php echo $l_pln; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">PLN</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ZAR'><b><?php echo $l_zar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ZAR</button></td>
+                                </tr>
+                                <tr style="display:none;">
+                                    <td><?php echo str_replace(".", ",", $AUD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $BMD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $CAD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $HKD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $NZD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $SGD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $TWD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $ILS); ?></td>
+                                    <td><?php echo str_replace(".", ",", $PLN); ?></td>
+                                    <td><?php echo str_replace(".", ",", $ZAR); ?></td>
                                 </tr>
                                 <tr>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=CZK'><b><?php echo $l_czk; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">CZK</button></td>
@@ -344,6 +368,18 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BHD'><b><?php echo $l_bhd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BHD</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=KWD'><b><?php echo $l_kwd; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">KWD</button></td>
                                 </tr>
+                                <tr style="display:none;">
+                                    <td><?php echo str_replace(".", ",", $CZK); ?></td>
+                                    <td><?php echo str_replace(".", ",", $DKK); ?></td>
+                                    <td><?php echo str_replace(".", ",", $NOK); ?></td>
+                                    <td><?php echo str_replace(".", ",", $SEK); ?></td>
+                                    <td><?php echo str_replace(".", ",", $ARS); ?></td>
+                                    <td><?php echo str_replace(".", ",", $CLP); ?></td>           
+                                    <td><?php echo str_replace(".", ",", $PHP); ?></td>
+                                    <td><?php echo str_replace(".", ",", $MXN); ?></td>
+                                    <td><?php echo str_replace(".", ",", $BHD); ?></td>
+                                    <td><?php echo str_replace(".", ",", $KWD); ?></td>
+                                </tr>
                                 <tr>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=BRL'><b><?php echo $l_brl; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">BRL</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=MYR'><b><?php echo $l_myr; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">MYR</button></td>
@@ -356,6 +392,18 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=NGN'><b><?php echo $l_ngn; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">NGN</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=THB'><b><?php echo $l_thb; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">THB</button></td>
                                 </tr>
+                                <tr style="display:none;">
+                                    <td><?php echo str_replace(".", ",", $BRL); ?></td>
+                                    <td><?php echo str_replace(".", ",", $MYR); ?></td>
+                                    <td><?php echo str_replace(".", ",", $VEF); ?></td>
+                                    <td><?php echo str_replace(".", ",", $UAH); ?></td>
+                                    <td><?php echo str_replace(".", ",", $VND); ?></td>
+                                    <td><?php echo str_replace(".", ",", $BDT); ?></td>
+                                    <td><?php echo str_replace(".", ",", $HUF); ?></td>
+                                    <td><?php echo str_replace(".", ",", $MMK); ?></td>
+                                    <td><?php echo str_replace(".", ",", $NGN); ?></td>
+                                    <td><?php echo str_replace(".", ",", $THB); ?></td>
+                                </tr>
                                 <tr>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=AED'><b><?php echo $l_aed; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">AED</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=SAR'><b><?php echo $l_sar; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">SAR</button></td>
@@ -367,7 +415,19 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=ETH'><b><?php echo $l_eth; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">ETH</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAG'><b><?php echo $l_xag; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAG</button></td>
                                     <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=XAU'><b><?php echo $l_xau; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">XAU</button></td>
-                                </tr>    
+                                </tr>
+                                <tr style="display:none;">
+                                    <td><?php echo str_replace(".", ",", $AED); ?></td>
+                                    <td><?php echo str_replace(".", ",", $SAR); ?></td>
+                                    <td><?php echo str_replace(".", ",", $PKR); ?></td>
+                                    <td><?php echo str_replace(".", ",", $LKR); ?></td>
+                                    <td><?php echo str_replace(".", ",", $INR); ?></td>
+                                    <td><?php echo str_replace(".", ",", $BTC); ?></td>
+                                    <td><?php echo str_replace(".", ",", $LTC); ?></td>
+                                    <td><?php echo str_replace(".", ",", $ETH); ?></td>
+                                    <td><?php echo str_replace(".", ",", $XAG); ?></td>
+                                    <td><?php echo str_replace(".", ",", $XAU); ?></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
