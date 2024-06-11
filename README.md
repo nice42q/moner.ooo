@@ -7,6 +7,13 @@ The language is selected according to the Web-Browser language set; if the langu
 ###### Display your favorite currency directly
 [moner.ooo/?in=usd](https://moner.ooo/?in=usd)
 
+###### Use XMR (Monero) prices data for Office (Excel, Calc)
+Select field A1 and go to ‘Data’ → ‘Link to external data...’ → input the URL (https://moner.ooo/) and confirm with Enter. Confirm the import options and then select ‘HTML_1’.
+
+3600 seconds = 1 hour
+
+(Example with Picture [kuno.anne.media](https://kuno.anne.media/donate/onml/))
+
 ###### Webserver sponsored by
 [native-servers.com](https://native-servers.com/)
 
