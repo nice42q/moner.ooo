@@ -8,6 +8,8 @@ $meta_keywords = "Monero, XMR, Fiat, Wert, Kurs, Live, Wechsel, Umrechnung"; // 
 
 $title_h1 = "umrechnung nach"; // ↓ XMR [...] ↓
 
+$moneroooTable = "Service bereitgestellt von <a href='https://moner.ooo/'>Moner.ooo</a>, Daten bereitgestellt von <a href='https://www.coingecko.com/de/coins/monero' hreflang='de' rel='external'>CoinGecko</a>";
+
 // Info Text
 $info = "Die Werte auf dieser Webseite dienen nur der Information. Der Wert ist nicht garantiert und wird ohne vorherige Ankündigung geändert. Die Werte werden alle 5 Sekunden aktualisiert. Zuletzt um <u title='Stunden:Minuten:Sekunden (hh:mm:ss)'>".$time."</u> Uhr, Europe/Berlin. Daten bereitgestellt von <a class='text-white' href='https://www.coingecko.com/de/munze/monero' hreflang='de' rel='external' target='_blank'>CoinGecko</a>.<br/><a target='_blank' href='https://kuno.anne.media/donate/onml/' rel='external' hreflang='de'><img loading='lazy' src='./img/kuno-monero-26x26.png' width='17' height='17' alt='Kuno - Moner.ooo Spendenseite'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/lang/de/' class='text-white' rel='external' hreflang='de'>Kuno – Mit Monero Spenden sammeln</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>GitHub</a>";
 
