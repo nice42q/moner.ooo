@@ -428,6 +428,11 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                     <td><?php echo str_replace(".", ",", $XAG); ?></td>
                                     <td><?php echo str_replace(".", ",", $XAU); ?></td>
                                 </tr>
+								<tr style="display:none;">
+                                    <td colspan="7"><?php echo $moneroooTable; ?></td>
+                                    <td><?php echo $time; ?></td>
+									<td>TZ:Europe/Berlin</td>
+								</tr>
                             </tbody>
                         </table>
                     </div>
