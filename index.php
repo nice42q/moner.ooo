@@ -124,11 +124,11 @@ if(array_key_exists('HTTP_ACCEPT_LANGUAGE', $_SERVER)){
     $lang = "en";
 }
 
-if($lang == 'zh'){
+if($lang == 'zh' || $lang == 'pt' ){
 	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 }
 
-$acceptLang = ['de','es','it','zh-CN','nl','pl','el','pt','ru'];
+$acceptLang = ['de','es','it','zh-CN','nl','pl','el','pt-BR','ru'];
 $lang = in_array($lang, $acceptLang) ? $lang : 'en';
 $lang = strtolower($lang);
 require_once "lang/{$lang}.php"; 
