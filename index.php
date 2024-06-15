@@ -128,7 +128,7 @@ if($lang == 'zh'){
 	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 }
 
-$acceptLang = ['de','es','it','zh-CN'];
+$acceptLang = ['de','es','it','zh-CN','nl','pl','el','pt','ru'];
 $lang = in_array($lang, $acceptLang) ? $lang : 'en';
 $lang = strtolower($lang);
 require_once "lang/{$lang}.php"; 
