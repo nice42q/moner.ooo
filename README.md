@@ -15,7 +15,7 @@ Select field A1 and go to ‘Data’ → ‘Link to external data...’ → inpu
 (Example with Picture [kuno.anne.media](https://kuno.anne.media/donate/onml/))
 
 ###### Webserver sponsored by
-[native-servers.com](https://native-servers.com/)
+[![Servers Guru](/img/servers-guru.svg)](https://servers.guru/)
 
 ###### Domain (9 Years) sponsored by
 [kuno.anne.media](https://kuno.anne.media/donate/onml/)
