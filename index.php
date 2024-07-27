@@ -429,8 +429,8 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                 </tr>
 				<tr style="display:none;">
                                     <td colspan="7"><?php echo $moneroooTable; ?></td>
-                                    <td><?php echo $time; ?></td>
-				    <td>TZ:<?php echo date_default_timezone_get(); ?></td>
+                                    <td>Unix Time:</td>
+				    <td colspan="2"><?php echo $api_cg->time; ?></td>
 				</tr>
                             </tbody>
                         </table>
