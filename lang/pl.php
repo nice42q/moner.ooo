@@ -2,7 +2,7 @@
 // For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
 $lang_meta = "pl"; // https://www.w3schools.com/tags/ref_language_codes.asp
 
-$page_title = "Zamiana XMR na EUR/BTC/CHF/USD oraz wiele innych"; // The browser tab title or search engine title
+$page_title = "Wymiana XMR na EUR/BTC/CHF/USD oraz wiele innych"; // The browser tab title or search engine title
 $meta_description = "Kurs wymiany Monero w wielu różnych walutach, darmowy dla wszystkich."; // Search engine description / text
 $meta_keywords = "Monero, XMR, fiat, wartość, na żywo, natychmiastowe, wymiana, kurs"; // Search engine keywords
 
