@@ -38,6 +38,7 @@ input.form-control {
   color: #e9ecef;
   font-weight: 800;
   font-size: 42px;
+  margin: -5px auto -12px auto;
 }
 
 .equals-text {
