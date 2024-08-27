@@ -85,12 +85,6 @@ p {
   }
 }
 
-@media (min-width: 1400px) {
-  small.text-info {
-    padding-right: 7%;
-  }
-}
-
 .bs-tooltip-auto {
   padding: 0.4rem 0;
 }
