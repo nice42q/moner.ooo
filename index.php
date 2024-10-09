@@ -49,6 +49,7 @@ $array = array("EUR",
 	"PKR",
 	"LKR",
 	"INR",
+	"GEL",
 	"BTC",
 	"LTC",
 	"ETH",
@@ -115,6 +116,7 @@ $CLP = $api_cg->clp->lastValue;
 $CZK = $api_cg->czk->lastValue;
 $DKK = $api_cg->dkk->lastValue;
 $MXN = $api_cg->mxn->lastValue;
+$GEL = $api_cg->gel->lastValue;
 
 // Lädt die Sprachdatei, nach der Sprache die im Browser eingestellt wurde
 if(array_key_exists('HTTP_ACCEPT_LANGUAGE', $_SERVER)){
@@ -122,12 +124,21 @@ if(array_key_exists('HTTP_ACCEPT_LANGUAGE', $_SERVER)){
 }else{
     $lang = "en";
 }
-
-if($lang == 'zh' || $lang == 'pt' ){
-	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
+// https://www.alchemysoftware.com/livedocs/ezscript/Topics/Catalyst/Language.htm
+if($lang == 'zh' || $lang == 'pt'){
+	$relang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
+        if(substr($relang, 2, 1) == '-'){
+                if($relang == 'zh-Hans' || 'zh-CN' || 'zh-SG'){
+                        $lang = 'zh';
+                }elseif($relang == 'zh-Hant' || 'zh-HK' || 'zh-MO' || 'zh-TW'){
+                        $lang = 'zh-Hant';
+                }elseif($relang == 'pt-BR'){
+                        $lang = 'pt';
+                }
+        }
 }
 
-$acceptLang = ['de','es','it','zh-CN','nl','pl','el','pt-BR','ru','cs','fa'];
+$acceptLang = ['de','es','it','zh','zh-Hant','nl','pl','el','pt','ru','cs','fa','tr','fr','da'];
 $lang = in_array($lang, $acceptLang) ? $lang : 'en';
 $lang = strtolower($lang);
 require_once "lang/{$lang}.php"; 
@@ -223,6 +234,8 @@ if(isset($_GET["in"])) {
         $xmr_in_fiat = number_format($IDR, 2);
     }elseif($xmr_in == 'MXN'){
         $xmr_in_fiat = number_format($MXN, 2);
+    }elseif($xmr_in == 'GEL'){
+        $xmr_in_fiat = number_format($GEL, 2);
     }elseif($xmr_in == 'BTC'){
         $xmr_in_fiat = number_format($BTC, 8);
     }elseif($xmr_in == 'LTC'){
@@ -427,6 +440,12 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                                     <td><?php echo str_replace(".", ",", $XAG); ?></td>
                                     <td><?php echo str_replace(".", ",", $XAU); ?></td>
                                 </tr>
+								<tr style="display:none;">
+                                    <td><button type="button" class="btn btn-light" title="<a class='text-decoration-none fiat-tooltip' href='/?in=GEL'><b><?php echo $l_gel; ?></b></a>" data-toggle="tooltip" data-bs-html="true" data-placement="top">GEL</button></td>
+                                </tr>
+                                <tr style="display:none;">
+                                    <td><?php echo str_replace(".", ",", $GEL); ?></td>
+                                </tr>
 				<tr style="display:none;">
                                     <td colspan="7"><?php echo $moneroooTable; ?></td>
                                     <td>Unix Time:</td>
@@ -502,6 +521,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                         <option value="PKR" label="<?php echo $l_pkr; ?>">PKR</option>
                         <option value="LKR" label="<?php echo $l_lkr; ?>">LKR</option>
                         <option value="INR" label="<?php echo $l_inr; ?>">INR</option>
+						<option value="GEL" label="<?php echo $l_gel; ?>">GEL</option>
                         <option value="BTC" label="<?php echo $l_btc; ?>">BTC</option>
                         <option value="LTC" label="<?php echo $l_ltc; ?>">LTC</option>
                         <option value="ETH" label="<?php echo $l_eth; ?>">ETH</option>
@@ -681,6 +701,9 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
         } else if (selectBox == "MXN") {
                 let value = fiatAmount / <?php echo $MXN; ?>;
                 xmrValue.value = value.toFixed(12);
+        } else if (selectBox == "GEL") {
+                let value = fiatAmount / <?php echo $GEL; ?>;
+                xmrValue.value = value.toFixed(12);
         }
     }
 </script>
@@ -841,6 +864,9 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                 fiatValue.value = value.toFixed(2);
         } else if (selectBox == "MXN") {
                 let value = xmrAmount * <?php echo $MXN; ?>;
+                fiatValue.value = value.toFixed(2);
+        } else if (selectBox == "GEL") {
+                let value = xmrAmount * <?php echo $GEL; ?>;
                 fiatValue.value = value.toFixed(2);
         }
     }

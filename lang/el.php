@@ -70,6 +70,7 @@ $l_czk = "Τσεχική Κορώνα";
 $l_dkk = "Δανική Κορώνα";
 $l_clp = "Πέσο Χιλής";
 $l_mxn = "Πέσο Μεξικού";
+$l_gel = "Georgian Lari";
 
 // More Monero links
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/el/" hreflang="el" target="_blank" rel="external">Επίσημος ιστότοπος</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Σύστημα Κοινοτικής Χρηματοδότησης (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a>';
