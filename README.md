@@ -1,6 +1,12 @@
 ![Favicon - moner.ooo](/img/apple-touch-icon-152x152.png)
 # Moner.ooo
-Add a new language or an improvement via '[Pull request](https://github.com/nice42q/moner.ooo/pulls)' or report a Bug via '[Issues](https://github.com/nice42q/moner.ooo/issues)'.
+<a href="https://hosted.weblate.org/engage/monerooo/"><img src="https://hosted.weblate.org/widget/monerooo/monerooo/svg-badge.svg" alt="Übersetzungsstatus" /></a>
+
+<a href="https://hosted.weblate.org/engage/monerooo/">
+<img src="https://hosted.weblate.org/widget/monerooo/monerooo/multi-auto.svg" alt="Übersetzungsstatus" />
+</a>
+
+Report a Bug via '[Issues](https://github.com/nice42q/moner.ooo/issues)'.
 
 The language is selected according to the Web-Browser language set; if the language is not available, English is displayed by default.
 
