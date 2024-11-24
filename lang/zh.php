@@ -1,4 +1,5 @@
 <?php // Translator： Winslow SorenEricMent(逸雩)
+
 // For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
 $lang_meta = "zh"; // https://www.w3schools.com/tags/ref_language_codes.asp
 
