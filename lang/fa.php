@@ -1,24 +1,22 @@
 <?php
 // For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
-$lang_meta = "fa\" dir=\"rtl"; // https://www.w3schools.com/tags/ref_language_codes.asp
-
-$page_title = "تبدیل XMR به یورو/بیت‌کوین/فرانک سوئیس/دلار آمریکا و بسیاری موارد دیگر"; // The browser tab title or search engine title
-$meta_description = "The Monero live exchange rate in many different currencies, free for everyone."; // Search engine description / text
-$meta_keywords = "Monero, XMR, fiat, value, rate, live, exchange, conversion"; // Search engine keywords
-
-$title_h1 = "conversion to"; // ↓ XMR [...] ↓
-
+// https://www.w3schools.com/tags/ref_language_codes.asp
+$lang_meta = "fa\" dir=\"rtl";
+// The browser tab title or search engine title
+$page_title = "تبدیل XMR به یورو/بیت‌کوین/فرانک سوئیس/دلار آمریکا و بسیاری موارد دیگر";
+// Search engine description / text
+$meta_description = "The Monero live exchange rate in many different currencies, free for everyone.";
+// Search engine keywords
+$meta_keywords = "Monero, XMR, fiat, value, rate, live, exchange, conversion";
+// ↓ XMR [...] ↓
+$title_h1 = "conversion to";
 $moneroooTable = "Service provided by <a href='https://moner.ooo/'>Moner.ooo</a>, Data provided by <a href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external'>CoinGecko</a>";
-
 // Info Text
-$info = "<span style='display:inline-block;'>The exchange rates on this site are for information purposes only. They are not guaranteed to be accurate, and are subject to change without notice. The exchange rates are updated every 5 Seconds. Last at <u title='Hours:Minutes:Seconds (hh:mm:ss)'>".$time."</u> clock, Europe/Berlin. Data provided by <a class='text-white' href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_blank'>CoinGecko</a></span><span style='display:inline-block;'><a target='_blank' href='https://kuno.anne.media/donate/onml/' rel='external' hreflang='en'><img loading='lazy' src='./img/kuno-monero-26x26.png' width='17' height='17' alt='Kuno - Moner.ooo donation page'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/' class='text-white' rel='external' hreflang='en'>Kuno – Fundraise with Monero</a></span> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>GitHub</a> | <span style='display:inline-block;'><a style='text-decoration:none; font-weight:bold;' class='text-white' href='https://servers.guru/' hreflang='en' rel='external' target='_blank'>Webhosting provided by<img loading='lazy' src='./img/servers-guru.svg' height='19' alt='Servers Guru' title='Servers Guru' /></a></span>";
-
+$info = "<span style='display:inline-block;'>The exchange rates on this site are for information purposes only. They are not guaranteed to be accurate, and are subject to change without notice. The exchange rates are updated every 5 Seconds. Last at <u title='Hours:Minutes:Seconds (hh:mm:ss)'>$time</u> clock, Europe/Berlin. Data provided by <a class='text-white' href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_blank'>CoinGecko</a></span><span style='display:inline-block;'><a target='_blank' href='https://kuno.anne.media/donate/onml/' rel='external' hreflang='en'><img loading='lazy' src='./img/kuno-monero-26x26.png' width='17' height='17' alt='Kuno - Moner.ooo donation page'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/' class='text-white' rel='external' hreflang='en'>Kuno – Fundraise with Monero</a></span> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>GitHub</a> | <span style='display:inline-block;'><a style='text-decoration:none; font-weight:bold;' class='text-white' href='https://servers.guru/' hreflang='en' rel='external' target='_blank'>Webhosting provided by<img loading='lazy' src='./img/servers-guru.svg' height='19' alt='Servers Guru' title='Servers Guru' /></a></span>";
 $clipboard_copy_tooltip = "Copy to clipboard";
-
 $l_fiatSelect = "Currency choice";
 $l_fiatInput = "Fiat value input field";
 $l_xmrInput = "Monero value input field";
-
 // Tooltip Titel
 $l_eur = "Euro";
 $l_btc = "Bitcoin";
@@ -38,11 +36,11 @@ $l_zar = "South African Rand";
 $l_inr = "Indian Rupee";
 $l_aed = "UAE Dirham";
 $l_eth = "Ethereum";
-$l_uah = "Hryvnia"; 
+$l_uah = "Hryvnia";
 $l_krw = "South Korean won";
-$l_brl = "Brazilian Real"; 
-$l_myr = "Malaysian Ringgit"; 
-$l_cny = "Renminbi"; 
+$l_brl = "Brazilian Real";
+$l_myr = "Malaysian Ringgit";
+$l_cny = "Renminbi";
 $l_xag = "Silver (troy ounce)";
 $l_xau = "Gold (troy ounce)";
 $l_vnd = "Vietnamese dong";
@@ -64,16 +62,13 @@ $l_idr = "Indonesian Rupiah";
 $l_twd = "New Taiwan Dollar";
 $l_ars = "Argentine Peso";
 $l_bdt = "Bangladeshi Taka";
-$l_bhd = "Bahraini Dinar"; 
-$l_bmd = "Bermudan Dollar"; 
+$l_bhd = "Bahraini Dinar";
+$l_bmd = "Bermudan Dollar";
 $l_czk = "Czech Koruna";
 $l_dkk = "Danish Krone";
 $l_clp = "Chilean Peso";
 $l_mxn = "Mexican Peso";
 $l_gel = "Georgian Lari";
-
 // More Monero links
 $getmonero = '<a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://www.getmonero.org/" hreflang="en" target="_blank" rel="external">Official website</a>';
 $countrymonero = '';
-
-?>
