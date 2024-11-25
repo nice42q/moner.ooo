@@ -71,4 +71,4 @@ $l_mxn = "メキシコペソ";
 $l_gel = "Georgian Lari";
 // More Monero links
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/" hreflang="en" target="_blank" rel="external">公式ウェブサイト</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">コミュニティクラウドファンディングシステム (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Moneroオブザーバー</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Moneroトーク</a>';
-$countrymonero = ' | <a class="text-white" href="https://t.me/monero" hreflang="en" target="_blank" rel="external">Telegram - Monero XMR</a> | <a class="text-white" href="https://www.revuo-xmr.com/" hreflang="en" target="_blank" rel="external">Revuo Monero</a>';
+$countrymonero = '';
