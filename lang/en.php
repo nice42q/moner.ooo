@@ -72,3 +72,4 @@ $l_gel = "Georgian Lari";
 // More Monero links
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/" hreflang="en" target="_blank" rel="external">Official website</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a>';
 $countrymonero = '&nbsp;| <a class="text-white" href="https://t.me/monero" hreflang="en" target="_blank" rel="external">Telegram - Monero XMR</a> | <a class="text-white" href="https://www.revuo-xmr.com/" hreflang="en" target="_blank" rel="external">Revuo Monero</a>';
+$rtl = 'false';
