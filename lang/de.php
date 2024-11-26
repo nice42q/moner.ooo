@@ -73,3 +73,4 @@ $l_gel = "Georgischer Lari";
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/de/" hreflang="de" target="_blank" rel="external">Offizielle Webseite</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Community Crowdfunding System (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a>';
 $countrymonero = '&nbsp;| <a class="text-white" href="https://t.me/moneroger" hreflang="en" target="_blank" rel="external">Telegram - Monero Germany</a>';
 $rtl = 'false';
+$unixTime = "Unix Zeit:";
