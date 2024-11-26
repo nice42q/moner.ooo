@@ -257,7 +257,7 @@ if(isset($_GET["in"])) {
 $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $lang_meta; ?>">
+<html lang="<?php echo $lang_meta; ?>"<?php if($rtl == 'true'){echo ' dir="rtl"';} ?>>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
