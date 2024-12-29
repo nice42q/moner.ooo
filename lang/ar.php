@@ -1,7 +1,7 @@
 <?php
 // For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
 // https://www.w3schools.com/tags/ref_language_codes.asp
-$lang_meta = "";
+$lang_meta = "ar";
 // The browser tab title or search engine title
 $page_title = "تحويل XMR إلى EUR/BTC/CHF/USD والكثير غير ذلك";
 // Search engine description / text
@@ -73,4 +73,4 @@ $l_gel = "اللاري الجورجي";
 // More Monero links
 $getmonero = '<a class="text-white" href="https://www.getmonero.org/" hreflang="en" target="_blank" rel="external">الموقع الرسمي</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">نظام التمويل الجماعي المجتمعي (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a>';
 $countrymonero = '| <a class="text-white" href="https://t.me/monero" hreflang="en" target="_blank" rel="external">تيليجرام - مونيرو XMR</a> | <a class="text-white" href="https://www.revuo-xmr.com/" hreflang="en" target="_blank" rel="external">ريفو مونيرو</a>';
-$rtl = 'خطأ';
+$rtl = 'true';
