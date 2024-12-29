@@ -138,7 +138,7 @@ if($lang == 'zh' || $lang == 'pt'){
         }
 }
 
-$acceptLang = ['de','es','it','zh','zh-Hant','nl','pl','el','pt','ru','cs','fa','tr','fr','da'];
+$acceptLang = ['de','es','it','zh','zh-Hant','nl','pl','el','pt','ru','cs','fa','tr','fr','da','ar'];
 $lang = in_array($lang, $acceptLang) ? $lang : 'en';
 $lang = strtolower($lang);
 require_once "lang/{$lang}.php"; 
