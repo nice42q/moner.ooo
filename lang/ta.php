@@ -1,7 +1,7 @@
 <?php
 // For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
 // https://www.w3schools.com/tags/ref_language_codes.asp
-$lang_meta = "";
+$lang_meta = "ta";
 // The browser tab title or search engine title
 $page_title = "";
 // Search engine description / text
@@ -73,4 +73,4 @@ $l_gel = "";
 // More Monero links
 $getmonero = '';
 $countrymonero = '';
-$rtl = '';
+$rtl = 'false';
