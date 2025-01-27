@@ -10,7 +10,7 @@ $meta_description = "பல வேறுபட்ட நாணயங்களி
 $meta_keywords = "மோனெரோ, எக்ச்எம்ஆர், ஃபியட், மதிப்பு, வீதம், நேரடி, பரிமாற்றம், மாற்றம்";
 // ↓ XMR [...] ↓
 $title_h1 = "மாற்ற";
-$moneroooTable = "<a href='https: //moner.ooo/'>Moner.ooo</a>, <a href='https: //www.coingecko.com/en/coins/monero' hreflang='en' rel='external'>CoinGecko</a>";
+$moneroooTable = "";
 $unixTime = "யூனிக்ச் நேரம்:";
 // Info Text
 $info = "இந்த தளத்தின் பரிமாற்ற விகிதங்கள் செய்தி நோக்கங்களுக்காக மட்டுமே. அவை துல்லியமானவை என்று பொறுப்பு அளிக்கப்படவில்லை, மேலும் அறிவிப்பு இல்லாமல் மாற்றத்திற்கு உட்பட்டவை. ஒவ்வொரு 5 விநாடிகளிலும் பரிமாற்ற விகிதங்கள் புதுப்பிக்கப்படுகின்றன. கடைசியாக <u title='மணிநேரம்: நிமிடங்கள்: விநாடிகள் (HH: MM: SS)'>$time</u> கடிகாரம், ஐரோப்பா/பெர்லின். <a class='text-white' href='https: //www.coingecko.com/en/coins/monero' hreflang='en' rel='external' target='_ blank'>CoinGecko</a>.<br/><a target='_blank' href='https://kuno.anne.media/donate/onml/' rel='external' hreflang='en'><img loading='lazy' src='./img/kuno-monero-26x26.png' width='17' height='17' alt='Kuno - Moner.ooo donation page'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/' class='text-white' rel='external' hreflang='en'>Kuno – Fundraise with Monero</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>GitHub</a> | <a style='text-decoration:none; font-weight:bold;' class='text-white' href='https://servers.guru/' hreflang='en' rel='external' target='_blank'>Webhosting provided by<img loading='lazy' src='./img/servers-guru.svg' height='19' alt='Servers Guru' title='Servers Guru' /></a>";
