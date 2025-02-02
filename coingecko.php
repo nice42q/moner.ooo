@@ -66,7 +66,7 @@ $xmrdatas = json_decode(file_get_contents("coingecko.json"), true);
 $zeit = time();
 
 // Sind ~30 Minuten vergangen?
-if(($zeit - $xmrdatas['time']) >= 5){
+if(($zeit - $xmrdatas['time']) >= 300){
     //echo "Gespeicherte Zeit: ".$xmrdatas['time']."<br/>Aktuelle Zeit: ".$zeit;
 
 	// Initialize CURL
