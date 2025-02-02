@@ -264,9 +264,9 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
     <meta name="HandheldFriendly" content="true" /> 
     <meta name="MobileOptimized" content="320" /> 
     
-    <title lang="<?php echo $lang_meta; ?>"><?php echo $page_title; ?></title>
-    <meta name="description" lang="<?php echo $lang_meta; ?>" content="<?php echo $meta_description; ?>"/>
-    <meta name="keywords" lang="<?php echo $lang_meta; ?>" content="<?php echo $meta_keywords; ?>"/>
+    <title><?php echo $page_title; ?></title>
+    <meta name="description" content="<?php echo $meta_description; ?>"/>
+    <meta name="keywords" content="<?php echo $meta_keywords; ?>"/>
     
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
@@ -302,6 +302,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
             background-image: linear-gradient(to bottom right, #013c4a 0, #193e4c 44%, #004b5b 100%)!important;
             color: #fff;
             font-style: normal;
+	    background-attachment: fixed;
         }
         body {
             background-color: transparent;
@@ -316,7 +317,7 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
         <div class="row">            
             <div class="col-12">
                 <div class="cursor-default text-center text-white">
-                    <h1 lang="<?php echo $lang_meta; ?>"><span style="color:#4d4d4d;">&darr;</span>&nbsp;<span style="color:#ff6600;" title="Monero">XMR</span>&nbsp;<?php echo $title_h1; ?>&nbsp;<span style="color:#4d4d4d;">&darr;</span></h1>
+                    <h1><span style="color:#4d4d4d;">&darr;</span>&nbsp;<span style="color:#ff6600;" title="Monero">XMR</span>&nbsp;<?php echo $title_h1; ?>&nbsp;<span style="color:#4d4d4d;">&darr;</span></h1>
                     <div class="fiat-btns table-responsive">
                         <table class="table table-sm table-borderless">
                             <tbody>
@@ -531,11 +532,11 @@ $xmr_in_fiat = strtr($xmr_in_fiat, ",", " ");
                 </div>
                 
                 <hr class="gold" />
-                <small class="cursor-default text-white text-info" lang="<?php echo $lang_meta; ?>">
+                <small class="cursor-default text-white text-info">
                     <?php echo $info; ?>
                 </small>
                 <hr />
-                <small class="cursor-default text-white" lang="<?php echo $lang_meta; ?>">
+                <small class="cursor-default text-white">
                     <?php echo $getmonero.$countrymonero; ?>
                 </small>
             </div>
