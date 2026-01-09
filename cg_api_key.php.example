@@ -1,0 +1,14 @@
+<?php
+/**
+ * CoinGecko API Configuration
+ * If you have a paid Pro plan, enter your key in $coingecko_pro_api_key
+ * If you use the free Demo plan, enter your key in $coingecko_api_key
+ * If both are left empty, the script will use the Public API (subject to strict rate limits)
+ */
+
+// CoinGecko Pro API Key (leave empty if not available)
+$coingecko_pro_api_key = '';
+
+// CoinGecko Demo API Key (leave empty if not available)
+$coingecko_api_key = '';
+?>
