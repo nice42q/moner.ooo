@@ -6,6 +6,7 @@ $l_meta_description  = "A cotação em tempo real de Monero em várias moedas, d
 $l_meta_keywords     = "Monero, XMR, fiduciario, valor, taxa, agora, cotacao, conversao";
 
 $l_title_h1          = "converter para";
+$l_moneroooTable = "Serviço fornecido por <a href='https://moner.ooo/'>Moner.ooo</a>, dados fornecidos por <a href='https://www.coingecko.com/pt/coins/monero' hreflang='pt' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Escolha da moeda";
 $l_fiatInput         = "Campo de entrada do valor fiduciário";
 $l_xmrInput          = "Campo de entrada do valor Monero";

@@ -7,6 +7,7 @@ $l_meta_description  = "门罗币实时多币种汇率，免费提供。";
 $l_meta_keywords     = "门罗币, XMR, 法币, 价格, 汇率, 实时, 交易, 结汇";
 
 $l_title_h1          = "转换至";
+$l_moneroooTable = "服务由 <a href='https://moner.ooo/'>Moner.ooo</a> 提供，数据由 <a href='https://www.coingecko.com/zh/coins/monero' hreflang='zh' rel='external'>CoinGecko</a> 提供";
 $l_fiatSelect        = "选择货币";
 $l_fiatInput         = "法币数值输入框";
 $l_xmrInput          = "门罗币数值输入框";

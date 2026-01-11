@@ -6,6 +6,7 @@ $l_meta_description  = "Le taux de change en direct du Monero dans de nombreuses
 $l_meta_keywords     = "Monero, XMR, fiat, valeur, taux, en direct, échange, conversion";
 
 $l_title_h1          = "conversion en";
+$l_moneroooTable = "Service fourni par <a href='https://moner.ooo/'>Moner.ooo</a>, données fournies par <a href='https://www.coingecko.com/fr/coins/monero' hreflang='fr' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Choix de la devise";
 $l_fiatInput         = "Champ de saisie de la valeur fiat";
 $l_xmrInput          = "Champ de saisie de la valeur Monero";

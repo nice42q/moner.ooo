@@ -6,6 +6,7 @@ $l_meta_description  = "Η ζωντανή ισοτιμία του Monero σε π
 $l_meta_keywords     = "Monero, XMR, fiat, αξία, ισοτιμία, ζωντανά, ανταλλαγή, μετατροπή";
 
 $l_title_h1          = "μετατροπή σε";
+$l_moneroooTable = "Η υπηρεσία παρέχεται από το <a href='https://moner.ooo/'>Moner.ooo</a>, τα δεδομένα παρέχονται από το <a href='https://www.coingecko.com/el/coins/monero' hreflang='el' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Επιλογή νομίσματος";
 $l_fiatInput         = "Πεδίο εισαγωγής αξίας fiat";
 $l_xmrInput          = "Πεδίο εισαγωγής αξίας Monero";

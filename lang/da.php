@@ -6,6 +6,7 @@ $l_meta_description  = "Den live vekselkurs for Monero i mange forskellige valut
 $l_meta_keywords     = "Monero, XMR, fiat, værdi, kurs, live, vekselkurs, konvertering";
 
 $l_title_h1          = "konvertering til";
+$l_moneroooTable = "Service leveret af <a href='https://moner.ooo/'>Moner.ooo</a>, data leveret af <a href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Valutavalg";
 $l_fiatInput         = "Indtastningsfelt for fiatværdi";
 $l_xmrInput          = "Indtastningsfelt for Monero værdi";

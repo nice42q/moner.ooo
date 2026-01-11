@@ -6,6 +6,7 @@ $l_meta_description  = "다양한 통화로 모네로의 실시간 환율, 누�
 $l_meta_keywords     = "모네로, XMR, 법정화폐, 가치, 환율, 실시간, 환전, 변환";
 
 $l_title_h1          = "변환 대상";
+$l_moneroooTable = "서비스 제공: <a href='https://moner.ooo/'>Moner.ooo</a>, 데이터 제공: <a href='https://www.coingecko.com/ko/coins/monero' hreflang='ko' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "통화 선택";
 $l_fiatInput         = "법정화폐 입력 필드";
 $l_xmrInput          = "모네로 입력 필드";

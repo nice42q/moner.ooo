@@ -6,6 +6,7 @@ $l_meta_description  = "さまざまな通貨でのMoneroのリアルタイム�
 $l_meta_keywords     = "Monero, XMR, フィアット, 価値, レート, リアルタイム, 為替, 変換";
 
 $l_title_h1          = "変換先";
+$l_moneroooTable = "サービス提供：<a href='https://moner.ooo/'>Moner.ooo</a>、データ提供：<a href='https://www.coingecko.com/ja/coins/monero' hreflang='ja' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "通貨の選択";
 $l_fiatInput         = "フィアット通貨の入力フィールド";
 $l_xmrInput          = "Moneroの入力フィールド";

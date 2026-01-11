@@ -6,6 +6,7 @@ $l_meta_description  = "பல வேறுபட்ட நாணயங்கள
 $l_meta_keywords     = "மோனெரோ, எக்ச்எம்ஆர், ஃபியட், மதிப்பு, வீதம், நேரடி, பரிமாற்றம், மாற்றம்";
 
 $l_title_h1          = "மாற்ற";
+$l_moneroooTable = "சேவை வழங்கியது <a href='https://moner.ooo/'>Moner.ooo</a>, தரவு வழங்கியது <a href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "நாணய தேர்வு";
 $l_fiatInput         = "ஃபியட் மதிப்பு உள்ளீட்டு புலம்";
 $l_xmrInput          = "மோனெரோ மதிப்பு உள்ளீட்டு புலம்";

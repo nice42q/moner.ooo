@@ -6,6 +6,7 @@ $l_meta_description  = "Živý směnný kurz Monera v mnoha různých měnách, 
 $l_meta_keywords     = "Monero, XMR, fiat, hodnota, kurz, živý, směna, konverze";
 
 $l_title_h1          = "konverze na";
+$l_moneroooTable = "Službu poskytuje <a href='https://moner.ooo/'>Moner.ooo</a>, data poskytuje <a href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Výběr měny";
 $l_fiatInput         = "Vstupní pole pro hodnotu fiat měny";
 $l_xmrInput          = "Vstupní pole pro hodnotu Monero";

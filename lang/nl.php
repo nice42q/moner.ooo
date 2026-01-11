@@ -6,6 +6,7 @@ $l_meta_description  = "De live wisselkoers van Monero in veel verschillende val
 $l_meta_keywords     = "Monero, XMR, fiat, waarde, koers, live, wissel, conversie";
 
 $l_title_h1          = "conversie naar";
+$l_moneroooTable = "Service geleverd door <a href='https://moner.ooo/'>Moner.ooo</a>, gegevens verstrekt durch <a href='https://www.coingecko.com/nl/coins/monero' hreflang='nl' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Valutakeuze";
 $l_fiatInput         = "Fiat waarde invoerveld";
 $l_xmrInput          = "Monero waarde invoerveld";

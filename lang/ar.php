@@ -6,6 +6,7 @@ $l_meta_description  = "سعر الصرف المباشر للمونيرو بال
 $l_meta_keywords     = "مونرو، XMR، فيات، قيمة، سعر، مباشر، تبادل، تحويل";
 
 $l_title_h1          = "التحويل إلى";
+$l_moneroooTable = "الخدمة مقدمة من <a href='https://moner.ooo/'>Moner.ooo</a>، البيانات مقدمة من <a href='https://www.coingecko.com/ar/coins/monero' hreflang='ar' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "اختيار العملة";
 $l_fiatInput         = "حقل إدخال قيمة الفيات";
 $l_xmrInput          = "حقل إدخال قيمة مونرو";

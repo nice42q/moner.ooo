@@ -6,6 +6,7 @@ $l_meta_description  = "Актуальный курс обмена Monero на �
 $l_meta_keywords     = "Monero, XMR, фиат, стоимость, курс, живой, обмен, конвертация";
 
 $l_title_h1          = "конвертация в";
+$l_moneroooTable = "Сервис предоставлен <a href='https://moner.ooo/'>Moner.ooo</a>, данные предоставлены <a href='https://www.coingecko.com/ru/coins/monero' hreflang='ru' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Выбор валюты";
 $l_fiatInput         = "Поле ввода значения в фиатной валюте";
 $l_xmrInput          = "Поле ввода значения в Monero";

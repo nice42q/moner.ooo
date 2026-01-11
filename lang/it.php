@@ -6,6 +6,7 @@ $l_meta_description  = "Il tasso di cambio Monero live in molte valute diverse, 
 $l_meta_keywords     = "Monero, XMR, fiat, valore, tasso, live, scambio, conversione";
 
 $l_title_h1          = "conversione in";
+$l_moneroooTable = "Servizio fornito da <a href='https://moner.ooo/'>Moner.ooo</a>, dati forniti da <a href='https://www.coingecko.com/it/coins/monero' hreflang='it' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Scelta della valuta";
 $l_fiatInput         = "Campo di inserimento valore fiat";
 $l_xmrInput          = "Campo di inserimento valore Monero";

@@ -6,6 +6,7 @@ $l_meta_description  = "نرخ لحظه‌ای مونرو به بسیاری از
 $l_meta_keywords     = "مونرو, XMR, فیات, ارزش, نرخ, لحظه‌ای, تبادل, تبدیل";
 
 $l_title_h1          = "تبدیل به";
+$l_moneroooTable = "سرویس توسط <a href='https://moner.ooo/'>Moner.ooo</a> ارائه شده است، داده‌ها توسط <a href='https://www.coingecko.com/en/coins/monero' hreflang='en' rel='external'>CoinGecko</a> ارائه شده است";
 $l_fiatSelect        = "انتخاب ارز";
 $l_fiatInput         = "فیلد ورود مقدار ارز فیات";
 $l_xmrInput          = "فیلد ورود مقدار مونرو";

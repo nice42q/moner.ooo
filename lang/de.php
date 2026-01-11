@@ -6,6 +6,7 @@ $l_meta_description  = "Der Monero live Wechselkurs in vielen verschiedenen Wäh
 $l_meta_keywords     = "Monero, XMR, Fiat, Wert, Kurs, Live, Wechsel, Umrechnung";
 
 $l_title_h1          = "umrechnung nach";
+$l_moneroooTable     = "Service bereitgestellt von <a href='https://moner.ooo/'>Moner.ooo</a>, Daten bereitgestellt von <a href='https://www.coingecko.com/de/coins/monero' hreflang='de' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Währungsauswahl";
 $l_fiatInput         = "Fiat-Wert Eingabefeld";
 $l_xmrInput          = "Monero-Wert Eingabefeld";

@@ -6,6 +6,7 @@ $l_meta_description  = "Monero'nun birçok farklı para biriminde canlı döviz 
 $l_meta_keywords     = "Monero, XMR, fiat, değer, oran, canlı, döviz, dönüşüm";
 
 $l_title_h1          = "dönüştürme";
+$l_moneroooTable = "Hizmet sağlayan <a href='https://moner.ooo/'>Moner.ooo</a>, veriler <a href='https://www.coingecko.com/tr/coins/monero' hreflang='tr' rel='external'>CoinGecko</a> tarafından sağlanmıştır";
 $l_fiatSelect        = "Para birimi seçimi";
 $l_fiatInput         = "Fiat değer giriş alanı";
 $l_xmrInput          = "Monero değer giriş alanı";

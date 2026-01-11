@@ -6,6 +6,7 @@ $l_meta_description  = "Kurs wymiany Monero w wielu różnych walutach, darmowy 
 $l_meta_keywords     = "Monero, XMR, fiat, wartość, na żywo, natychmiastowe, wymiana, kurs";
 
 $l_title_h1          = "wymiana na";
+$l_moneroooTable = "Usługa świadczona przez <a href='https://moner.ooo/'>Moner.ooo</a>, dane dostarczone przez <a href='https://www.coingecko.com/pl/coins/monero' hreflang='pl' rel='external'>CoinGecko</a>";
 $l_fiatSelect        = "Wybór waluty";
 $l_fiatInput         = "Pole wprowadzania wartości fiat";
 $l_xmrInput          = "Pole wprowadzania wartości Monero";
