@@ -191,8 +191,8 @@ if (isset($_GET["in"])) {
 	                    <?php echo $l_info ?? ''; ?>
 	                </small>
 				</div>
-                <hr />
 				<div class="footer-box">
+					<hr />
 	                <small class="cursor-default text-white">
 	                    <?php echo ($l_getmonero ?? '') . ($l_countrymonero ?? ''); ?>
 	                </small>
