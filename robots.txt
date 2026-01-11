@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /webpack.config.js
+Disallow: /.gitignore
+Disallow: /lang/
+Disallow: /cg_api_key.php
+Disallow: /cg_api_key.php.example
+Disallow: /coingecko.php
