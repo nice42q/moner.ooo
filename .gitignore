@@ -1,1 +1,7 @@
-/node_modules/
+node_modules/
+package-lock.json
+cg_api_key.php
+tmp/
+*.json-original
+.DS_Store
+Thumbs.db

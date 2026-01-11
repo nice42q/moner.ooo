@@ -1,4 +1,21 @@
-a{
+html {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #013c4a 0, #193e4c 44%, #004b5b 100%) !important;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+body,
+td {
+  background-color: transparent !important;
+}
+
+.hidden-data {
+  display: none !important;
+}
+
+a {
   display: inline flow-root;
 }
 
@@ -21,6 +38,7 @@ a.fiat-tooltip {
   border-top: 1px;
   border-bottom: 1px;
   width: auto !important;
+  min-width: 59px !important;
 }
 
 table.table {
@@ -53,8 +71,11 @@ p {
   color: #e9ecef;
 }
 
-.gold {
-  color: #e8be74;
+hr.xmr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ff6600, transparent);
+  opacity: 0.5;
 }
 
 .cursor-default {
@@ -102,4 +123,17 @@ p {
   top: -1px;
   border-width: 0.4rem 0.4rem 0;
   border-top-color: #000;
+}
+
+.btn-outline-secondary.input-group-text.clipboard-copy:hover {
+  color: #000;
+  background-color: #d3d4d5;
+  border-color: #c6c7c8;
+}
+
+.clipboard-copy {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

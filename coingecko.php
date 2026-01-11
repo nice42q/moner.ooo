@@ -1,12 +1,19 @@
 <?php
+if (!defined('MONEROOO_ACCESS')) {
+    header('HTTP/1.1 403 Forbidden');
+    exit('Direct access denied.');
+}
+if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
+    header('HTTP/1.1 403 Forbidden');
+    exit('Direct access denied.');
+}
 $json_file = "coingecko.json";
 $xmrdatas = file_exists($json_file) ? json_decode(file_get_contents($json_file), true) : [];
 
 $time = time();
+include_once('cg_api_key.php');
 
-if(($time - ($xmrdatas['time'] ?? 0)) >= 300){
-	include('cg_api_key.php');
-
+if(($time - ($xmrdatas['time'] ?? 0)) >= $api_refresh_time){
 	$new_array = array();
 	$array = array("EUR", "BTC", "USD", "GBP", "CHF", "RUB", "CNY", "JPY", "IDR", "KRW", "TRY", "AUD", "BMD", "CAD", "HKD", "NZD", "SGD", "TWD", "ILS", "PLN", "ZAR", "CZK", "DKK", "NOK", "SEK", "ARS", "CLP", "PHP", "MXN", "BHD", "KWD", "BRL", "MYR", "VEF", "UAH", "VND", "BDT", "HUF", "MMK", "NGN", "THB", "AED", "SAR", "PKR", "LKR", "INR", "GEL", "LTC", "ETH", "XAG", "XAU");
 
