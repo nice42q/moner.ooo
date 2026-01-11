@@ -1,0 +1,21 @@
+{
+  "short_name": "Moner.ooo",
+  "name": "Moner.ooo",
+  "icons": [
+    {
+      "src": "/img/favicon-196x196.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/apple-touch-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#193e4c",
+  "background_color": "#193e4c"
+}

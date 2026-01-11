@@ -1,0 +1,139 @@
+html {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #013c4a 0, #193e4c 44%, #004b5b 100%) !important;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+body,
+td {
+  background-color: transparent !important;
+}
+
+.hidden-data {
+  display: none !important;
+}
+
+a {
+  display: inline flow-root;
+}
+
+p.fiat-info {
+  color: #4d4d4d;
+}
+
+p.fiat-info span,
+a.fiat-tooltip {
+  color: white;
+}
+
+.btn {
+  padding: 2px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.clipboard-copy {
+  border-top: 1px;
+  border-bottom: 1px;
+  width: auto !important;
+  min-width: 59px !important;
+}
+
+table.table {
+  max-width: 472px;
+  margin: auto;
+}
+
+.input-group-text {
+  width: 24%;
+  font-weight: 800;
+}
+
+input.form-control {
+  font-weight: 800;
+}
+
+.equals-box {
+  text-align: center;
+  color: #e9ecef;
+  font-weight: 800;
+  font-size: 42px;
+  margin: -5px auto -12px auto;
+}
+
+.equals-text {
+  vertical-align: super;
+}
+
+p {
+  color: #e9ecef;
+}
+
+hr.xmr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ff6600, transparent);
+  opacity: 0.5;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 475px) {
+  .btn {
+    padding: 1px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.88rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    min-width: 38px;
+  }
+}
+
+.bs-tooltip-auto {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-auto .tooltip-arrow {
+  bottom: 0;
+}
+
+.bs-tooltip-auto .tooltip-arrow::before {
+  top: -1px;
+  border-width: 0.4rem 0.4rem 0;
+  border-top-color: #000;
+}
+
+.btn-outline-secondary.input-group-text.clipboard-copy:hover {
+  color: #000;
+  background-color: #d3d4d5;
+  border-color: #c6c7c8;
+}
+
+.clipboard-copy {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

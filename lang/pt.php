@@ -1,76 +1,93 @@
 <?php
-// For the HTML meta specification, e.g. <!DOCTYPE html><html lang="en">
-// https://www.w3schools.com/tags/ref_language_codes.asp
-$lang_meta = "pt";
-// The browser tab title or search engine title
-$page_title = "Converter XMR para BRL/EUR/BTC/USD e muito mais";
-// Search engine description / text
-$meta_description = "A cotação em tempo real de Monero em várias moedas, de graça a todos.";
-// Search engine keywords
-$meta_keywords = "Monero, XMR, fiduciario, valor, taxa, agora, cotacao, conversao";
-// ↓ XMR [...] ↓
-$title_h1 = "converter para";
-$moneroooTable = "Este serviço é oferecido pelo <a href='https://moner.ooo/'>Moner.ooo</a>, os dados são providos pela <a href='https://www.coingecko.com/pt/moedas/monero' hreflang='pt' rel='external'>CoinGecko</a>";
-// Info Text
-$info = "As cotações oferecidas neste site são apenas para fins informativos. Não há garantia que as cotações estejam precisas e estão sujeitas à mudanças sem aviso prévio. As cotações são atualizadas a cada 5 segundos. A última atualização foi em <u title='Hours:Minutes:Seconds (hh:mm:ss)'>$time</u>, horário europeu (Berlin). Os dados são providos pela <a class='text-white' href='https://www.coingecko.com/pt/moedas/monero' hreflang='pt' rel='external' target='_blank'>CoinGecko</a>.<br/><a target='_blank' href='https://kuno.anne.media/donate/onml/' rel='external' hreflang='en'><img loading='lazy' src='./img/kuno-monero-26x26.png' width='17' height='17' alt='Kuno - Moner.ooo donation page'></a>&nbsp;<a target='_blank' href='https://kuno.anne.media/lang/pt/' class='text-white' rel='external' hreflang='pt'>Kuno – Arrecade fundos com Monero</a> | <a class='text-white' href='https://github.com/nice42q/moner.ooo' hreflang='en' rel='external' target='_blank'>GitHub</a> | <a style='text-decoration:none; font-weight:bold;' class='text-white' href='https://servers.guru/' hreflang='en' rel='external' target='_blank'>Webhosting provided by<img loading='lazy' src='./img/servers-guru.svg' height='19' alt='Servers Guru' title='Servers Guru' /></a>";
-$clipboard_copy_tooltip = "Copiar para a área de transferência";
-$l_fiatSelect = "Moeda selecionada";
-$l_fiatInput = "Valor em moeda fiduciária";
-$l_xmrInput = "Valor em Monero";
-// Tooltip Titel
-$l_eur = "Euro";
-$l_btc = "Bitcoin";
-$l_chf = "Franco suíço";
-$l_usd = "Dólar americano";
-$l_ltc = "Litecoin";
-$l_gbp = "Libra esterlina";
-$l_rub = "Rublo russo";
-$l_jpy = "Yen japonês";
-$l_try = "Lira turca";
-$l_cad = "Dólar canadense";
-$l_aud = "Dólar australiano";
-$l_hkd = "Dólar de Hong Kong";
-$l_sgd = "Dólar singapuriano";
-$l_pln = "Złoty polonês";
-$l_zar = "Rand sul-africano";
-$l_inr = "Rúpia indiana";
-$l_aed = "Dirham";
-$l_eth = "Ethereum";
-$l_uah = "Hryvnia ucraniana";
-$l_krw = "Won sul-coreano";
-$l_brl = "Real brasileiro";
-$l_myr = "Ringgit malaio";
-$l_cny = "Yuan chinês";
-$l_xag = "Prata (onça troy)";
-$l_xau = "Ouro (onça troy)";
-$l_vnd = "Dong vietnamita";
-$l_vef = "Bolívar venezuelano";
-$l_thb = "Baht tailandês";
-$l_sar = "Riyal saudita";
-$l_sek = "Krona sueca";
-$l_pkr = "Rúpia paquistanesa";
-$l_nzd = "Dólar neozelandês";
-$l_php = "Peso filipino";
-$l_nok = "Krone norueguês";
-$l_lkr = "Rúpia cingalesa";
-$l_mmk = "Quiate de Mianmar";
-$l_huf = "Forint húngaro";
-$l_ils = "Novo Shekel israelense";
-$l_kwd = "Dinar kuwaitiano";
-$l_ngn = "Naira nigeriana";
-$l_idr = "Rúpia indonésia";
-$l_twd = "Dólar taiwanês";
+$l_lang_meta         = "pt";
+$l_rtl               = "false";
+$l_page_title        = "Converter XMR para EUR/BTC/CHF/USD e muito mais";
+$l_meta_description  = "A cotação em tempo real de Monero em várias moedas, de graça a todos.";
+$l_meta_keywords     = "Monero, XMR, fiduciario, valor, taxa, agora, cotacao, conversao";
+
+$l_title_h1          = "converter para";
+$l_fiatSelect        = "Escolha da moeda";
+$l_fiatInput         = "Campo de entrada do valor fiduciário";
+$l_xmrInput          = "Campo de entrada do valor Monero";
+$l_clipboard_copy_tooltip = "Copiar para a área de transferência";
+$l_copytoclipboard_success_text = "Copiado!";
+$l_copytoclipboard_error_text   = "Erro!";
+
+$l_refresh_info_minute  = "As cotações são atualizadas a cada minuto.";
+$l_refresh_info_minutes = "As cotações são atualizadas a cada %s minutos.";
+$l_refresh_info_seconds = "As cotações são atualizadas a cada %s segundos.";
+$l_last_at              = "Última atualização às";
+$l_hr_min_sec           = "Horas:Minutos:Segundos (hh:mm:ss)";
+$l_unixTime             = "Tempo Unix:";
+
+$l_aed = "Dirham dos EAU";
 $l_ars = "Peso argentino";
+$l_aud = "Dólar australiano";
 $l_bdt = "Taka bengalês";
 $l_bhd = "Dinar bareinita";
 $l_bmd = "Dólar bermudense";
-$l_czk = "Koruna tcheca";
-$l_dkk = "Krone dinamarquês";
+$l_brl = "Real brasileiro";
+$l_btc = "Bitcoin";
+$l_cad = "Dólar canadense";
+$l_chf = "Franco suíço";
 $l_clp = "Peso chileno";
+$l_cny = "Renminbi chinês";
+$l_czk = "Coroa checa";
+$l_dkk = "Coroa dinamarquesa";
+$l_eth = "Ethereum";
+$l_eur = "Euro";
+$l_gbp = "Libra esterlina";
+$l_gel = "Lari georgiano";
+$l_hkd = "Dólar de Hong Kong";
+$l_huf = "Forint húngaro";
+$l_idr = "Rúpia indonésia";
+$l_ils = "Novo Shekel israelense";
+$l_inr = "Rúpia indiana";
+$l_jpy = "Iene japonês";
+$l_krw = "Won sul-coreano";
+$l_kwd = "Dinar kuwaitiano";
+$l_lkr = "Rúpia cingalesa";
+$l_ltc = "Litecoin";
+$l_mmk = "Quiate de Mianmar";
 $l_mxn = "Peso mexicano";
-$l_gel = "Lari Georgiano";
-// More Monero links
-$getmonero = '<a class="text-white" href="https://www.getmonero.org/pt-br/" hreflang="pt" target="_blank" rel="external">Site oficial</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">Sistema de vaquinhas comunitárias (CCS)</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Monero Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Monero Talk</a>';
-$countrymonero = '&nbsp;| <a class="text-white" href="https://t.me/monerobrasil" hreflang="en" target="_blank" rel="external">Telegram - Monero Brasil</a>';
-$rtl = 'false';
-$unixTime = "Unix Time:";
+$l_myr = "Ringgit malaio";
+$l_ngn = "Naira nigeriana";
+$l_nok = "Coroa norueguesa";
+$l_nzd = "Dólar neozelandês";
+$l_php = "Peso filipino";
+$l_pkr = "Rúpia paquistanesa";
+$l_pln = "Złoty polaco";
+$l_rub = "Rublo russo";
+$l_sar = "Riyal saudita";
+$l_sek = "Coroa sueca";
+$l_sgd = "Dólar de Singapura";
+$l_thb = "Baht tailandês";
+$l_try = "Lira turca";
+$l_twd = "Novo dólar taiwanês";
+$l_uah = "Hryvnia ucraniana";
+$l_usd = "Dólar americano";
+$l_vef = "Bolívar venezuelano";
+$l_vnd = "Dong vietnamita";
+$l_xag = "Prata (onça troy)";
+$l_xau = "Ouro (onça troy)";
+$l_zar = "Rand sul-africano";
+
+$l_info_main         = "As cotações oferecidas neste site são apenas para fins informativos.&nbsp;Não há garantia que as cotações estejam precisas e estão sujeitas a alterações sem aviso prévio.";
+
+$l_data_provided     = "Dados fornecidos por";
+$l_cg_url            = "https://www.coingecko.com/pt/moedas/monero";
+$l_cg_url_hreflang    = "pt";
+$l_coingecko         = $l_data_provided . " <a class=\"text-white\" href=\"$l_cg_url\" hreflang=\"$l_cg_url_hreflang\" rel=\"external\" target=\"_blank\">CoinGecko</a>.";
+
+$l_getmonero         = '<a class="text-white" href="https://www.getmonero.org/pt-br/" hreflang="pt" target="_blank" rel="external">Site oficial</a> | <a class="text-white" href="https://ccs.getmonero.org/" hreflang="en" target="_blank" rel="external">CCS</a> | <a class="text-white" href="https://www.monero.observer/resources/" hreflang="en" target="_blank" rel="external">Observer</a> | <a class="text-white" href="https://www.monerotalk.live/" hreflang="en" target="_blank" rel="external">Talk</a>';
+$l_countrymonero     = '&nbsp;| <a class="text-white" href="https://t.me/monerobrasil" hreflang="en" target="_blank" rel="external">Telegram BR</a>';
+
+$l_donation_page     = "página de doações";
+$l_kuno_homepage_url = "https://kuno.anne.media/lang/pt/";
+$l_kuno_homepage_url_hreflang = "pt";
+$l_kuno_text         = "Kuno – Arrecade fundos com Monero";
+$l_webserver_sponsor = "Alojamento Web fornecido por";
+
+$l_api_update        = $l_last_at . " <u title=\"$l_hr_min_sec\"><span id=\"lastUpdateDisplay\">00:00:00</span></u> (<span id=\"displayTimeZone\">hora local</span>).";
+
+$l_info              = $l_info_main."&nbsp;<span id=\"refreshInfo\" class=\"mb-1\">--</span>&nbsp;$l_api_update&nbsp;$l_coingecko<br><a target=\"_blank\" href=\"https://kuno.anne.media/donate/onml/\" rel=\"external\" hreflang=\"en\"><img loading=\"lazy\" align=\"middle\" src=\"./img/kuno-monero-26x26.png\" width=\"17\" height=\"17\" alt=\"Kuno - Moner.ooo $l_donation_page\"></a>&nbsp;<a target=\"_blank\" href=\"$l_kuno_homepage_url\" class=\"text-white\" rel=\"external\" hreflang=\"$l_kuno_homepage_url_hreflang\">$l_kuno_text</a> | <a class=\"text-white\" href=\"https://github.com/nice42q/moner.ooo\" hreflang=\"en\" rel=\"external\" target=\"_blank\">GitHub</a> | <a style=\"text-decoration:none; font-weight:bold;\" class=\"text-white\" href=\"https://servers.guru/\" hreflang=\"en\" rel=\"external\" target=\"_blank\">$l_webserver_sponsor<img loading=\"lazy\" align=\"middle\" src=\"./img/servers-guru.svg\" height=\"19\" alt=\"Servers Guru\" title=\"Servers Guru\"></a>";
