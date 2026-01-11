@@ -79,6 +79,9 @@ if (isset($_GET["in"])) {
     <meta name="theme-color" content="#193e4c">
     <meta name="msapplication-TileColor" content="#193e4c">
     <meta name="msapplication-TileImage" content="img/mstile-144x144.png">
+    <meta name="application-name" content="Moner.ooo" />
+    <meta name="apple-mobile-web-app-title" content="Moner.ooo" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#193e4c" />
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
     <link rel="manifest" href="manifest.json?v=<?php echo filemtime('manifest.json'); ?>">
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
