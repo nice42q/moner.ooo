@@ -186,13 +186,17 @@ if (isset($_GET["in"])) {
                 </div>
                 
                 <hr class="xmr" />
-                <small class="cursor-default text-white text-info">
-                    <?php echo $l_info ?? ''; ?>
-                </small>
+				<div class="info-text-box">
+	                <small class="cursor-default text-white text-info">
+	                    <?php echo $l_info ?? ''; ?>
+	                </small>
+				</div>
                 <hr />
-                <small class="cursor-default text-white">
-                    <?php echo ($l_getmonero ?? '') . ($l_countrymonero ?? ''); ?>
-                </small>
+				<div class="footer-box">
+	                <small class="cursor-default text-white">
+	                    <?php echo ($l_getmonero ?? '') . ($l_countrymonero ?? ''); ?>
+	                </small>
+				</div>
             </div>
         </div>
     </div>
